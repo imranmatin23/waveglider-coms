@@ -14,6 +14,8 @@ from collections import deque
 import cv2
 # Import calls to handle camera
 import EasyPySpin
+# Import os to create paths to store images at
+import os
 
 
 ## Server libraries
@@ -27,7 +29,9 @@ import sys
 
 ## Camera constants
 # Maximum number of images in rolling buffer at once
-ROLL_BUF_SIZE = 10
+ROLL_BUF_SIZE = 5
+# Location of image directory to save images
+IMG_DIR = "images"
 
 
 ## Server constants
@@ -43,14 +47,15 @@ EVENT = '{"eventStatus": 1, "cameraStatus": 1}'
 SHUTDOWN = '{"eventStatus": 0, "cameraStatus": 0}'
 
 
-# Simulates writing images from buffer to disk
-# TODO: Currently does not actually write anything to disk
-def writeImages(rollBuf):
+# Writes images from buffer to disk
+def writeImages(rollBuf, diskImages):
     try: 
         print("Writing images in rolling buffer to disk...")
-        for i, img in enumerate(rollBuf):
-            # img.tofile('temp')
-            print("Wrote image {} to disk...".format(i))
+        for img in rollBuf:
+            # TODO: Remove to write images to disk
+            # img.tofile(os.path.join(IMG_DIR, "img{}.png".format(diskImages.value)))
+            diskImages.value += 1
+            print("Wrote image {} to disk...".format(diskImages.value))
 
         print("Completed writing images to disk...")
     # capture all other exceptions
@@ -80,9 +85,8 @@ def captureImages(cameraStatus, eventStatus, diskImages):
             elif (cameraStatus.value and eventStatus.value):
                 # DEBUG
                 print("Calling writeImages()...")
-                writeImages(rollBuf)
+                writeImages(rollBuf, diskImages)
                 eventStatus.value = False
-                diskImages.value += ROLL_BUF_SIZE
                 print("Finished writeImages()...")
             else:
                 print("Recieved signal to terminate capturing images...")
