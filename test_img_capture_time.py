@@ -45,7 +45,7 @@ while (True):
         print()
         print("Saving images!")
         print()
-        print(roll_buf[0][1].tofile('temp'))
+        # print(roll_buf[0][1].tofile('temp'))
         SAVE=0
 
     
