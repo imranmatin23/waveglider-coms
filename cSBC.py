@@ -5,6 +5,7 @@
 # Handles multiprocessing
 from multiprocessing import Process, Value
 import logging
+import shutil
 
 ## Camera libraries
 # Import deque data structure to store rolling images
@@ -27,7 +28,7 @@ import sys
 
 ## Camera constants
 # Maximum number of images in rolling buffer at once
-ROLL_BUF_SIZE = 5
+ROLL_BUF_SIZE = 100
 # Location of image directory to save images
 IMG_DIR = "images"
 # Type of image to save to disk
@@ -74,7 +75,7 @@ def writeImages(rollBuf, diskImages, logger):
     try: 
         for img in rollBuf:
             # TODO: Remove to write images to disk
-            # img.tofile(os.path.join(IMG_DIR, "img{}.png".format(diskImages.value)))
+            img.tofile(os.path.join(IMG_DIR, "img{}.png".format(diskImages.value)))
             diskImages.value += 1
             logger.info("Wrote image {} to disk...".format(diskImages.value))
     except:
@@ -156,6 +157,11 @@ if __name__ == "__main__":
 
         # create logger
         logger = createLogger()
+
+        # create new images directory each time cSBC starts up
+        if os.path.exists(IMG_DIR):
+            shutil.rmtree(IMG_DIR)
+        os.mkdir(IMG_DIR)
 
         # create a process with a target function
         p1 = Process(target=connectionHandler, args=(cameraStatus, eventStatus, diskImages, logger, ))
