@@ -1,5 +1,6 @@
 import sys
-sys.path.append('../EasyPySpin/')
+
+sys.path.append("../EasyPySpin/")
 import cv2
 import EasyPySpin
 import time
@@ -11,7 +12,8 @@ from collections import deque
 # the memory buffer in the documentation is just a regular array
 # the numpy.ndarray has shape (n,m) where n is number fo rows and number of columns
 # For 2D array, return a shape tuple with only 2 elements (i.e. (n,m))
-# 
+#
+
 
 # Create object to handle FLIR camera operations
 cap = EasyPySpin.VideoCapture(0)
@@ -28,33 +30,32 @@ counter = 0
 start_time = time.time()
 
 # continuously capture images
-while (True):
+while True:
 
-    if (counter > 60):
+    if counter > 60:
         break
 
     # DEBUG
     t = time.time() - start_time
     counter += 1
-    if (t > 5):
+    if t > 5:
         SAVE = 1
         start_time = time.time()
 
     # save the images
-    if (SAVE):
+    if SAVE:
         print()
         print("Saving images!")
         print()
         # print(roll_buf[0][1].tofile('temp'))
-        SAVE=0
+        SAVE = 0
 
-    
     # read an image
     success, frame = cap.read()
 
     if success:
         # encode the image into an array
-        result, img = cv2.imencode('.png', frame)
+        result, img = cv2.imencode(".png", frame)
 
         # added to deque if valid image
         if result:
