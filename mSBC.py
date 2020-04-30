@@ -69,8 +69,9 @@ def readInput(logger):
 
 def clientSend(logger):
     """Send command to cSBC and recieve return message."""
-    try:
-        while True:
+
+    while True:
+        try:
             # get user input
             command, valid = readInput(logger)
             if not valid:
@@ -89,14 +90,18 @@ def clientSend(logger):
                 logger.info(f"Sent {command} to cSBC.")
 
                 # wait till recieve stats back from server
-                stats = s.recv(4096).decode("utf-8")
-                logger.info(f"Recieved: {stats}")
+                # stats = s.recv(4096).decode("utf-8")
+                # logger.info(f"Recieved: {stats}")
 
             # break forever loop if shutdown entered
             if command == COMMANDS[SHUTDOWN]:
                 break
-    except:
-        logger.error("Exception occurred", exc_info=True)
+        except ConnectionRefusedError as e:
+            # logger.error("Exception occurred", exc_info=True)
+            logger.error(e)
+        except:
+            logger.error("Fatal Exception occurred", exc_info=True)
+            break
 
     return 0
 

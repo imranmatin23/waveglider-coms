@@ -1,5 +1,8 @@
 # Author: Imran Matin
-# Description:
+# Description: This file tests how long it takes to write images to disk.
+
+# DEBUG
+import time
 
 ## Main libraries
 # Handles multiprocessing
@@ -32,9 +35,6 @@ import sys
 
 # Import datetime to know current system time
 from datetime import datetime as dt
-
-# Import sleep to allow for program execution stopping
-from time import sleep
 
 
 ## Camera constants
@@ -125,8 +125,17 @@ def captureImages(cameraStatus, eventStatus, diskImages, logger):
                 rollBuf.append(img)
             # write images when event triggered
             elif cameraStatus.value and eventStatus.value:
+                # DEBUG
+                print("Beginning to test writeImages...")
+                start = time.time()
+                num_captured = writeImages(rollBuf, diskImages, logger)
+                rollBuf.clear()
+                # DEBUG
+                elapsed = time.time() - start
+                print(
+                    f"writeImages captured {num_captured} images in {elapsed} seconds."
+                )
 
-                writeImages(rollBuf, diskImages, logger)
                 eventStatus.value = False
             # release the camera and exit
             else:
@@ -168,8 +177,6 @@ def connectionHandler(cameraStatus, eventStatus, diskImages, logger):
                         conn.sendall(STANDBY_RESP)
                     # Triggers an event and doesn't continue function till even completed
                     elif data == EVENT:
-                        # Wait for time for full event to complete
-                        sleep(EVENT_DELAY)
                         eventStatus.value, cameraStatus.value = True, True
                         while eventStatus.value:
                             continue

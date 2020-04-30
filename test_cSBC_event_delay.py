@@ -1,5 +1,8 @@
 # Author: Imran Matin
-# Description:
+# Description: This file tests how long it takes to write images to disk.
+
+# DEBUG
+import time
 
 ## Main libraries
 # Handles multiprocessing
@@ -33,9 +36,6 @@ import sys
 # Import datetime to know current system time
 from datetime import datetime as dt
 
-# Import sleep to allow for program execution stopping
-from time import sleep
-
 
 ## Camera constants
 # Maximum number of images in rolling buffer at once
@@ -44,6 +44,8 @@ ROLL_BUF_SIZE = 100
 IMG_DIR = "images"
 # Type of image to save to disk
 IMG_TYPE = ".png"
+# Amount of time in seconds to wait after event occurs
+EVENT_DELAY = 3
 
 ## Server constants
 # The server's hostname or IP address
@@ -125,8 +127,17 @@ def captureImages(cameraStatus, eventStatus, diskImages, logger):
                 rollBuf.append(img)
             # write images when event triggered
             elif cameraStatus.value and eventStatus.value:
+                # DEBUG
+                print("Beginning to test writeImages...")
+                start = time.time()
+                num_captured = writeImages(rollBuf, diskImages, logger)
+                rollBuf.clear()
+                # DEBUG
+                elapsed = time.time() - start
+                print(
+                    f"writeImages captured {num_captured} images in {elapsed} seconds."
+                )
 
-                writeImages(rollBuf, diskImages, logger)
                 eventStatus.value = False
             # release the camera and exit
             else:
@@ -152,9 +163,11 @@ def connectionHandler(cameraStatus, eventStatus, diskImages, logger):
                 logger.info(
                     f"eventStatus is {eventStatus.value}. cameraStatus is {cameraStatus.value}."
                 )
-
                 # Establish connection with client. Waits here until client attempts to attach
                 conn, addr = s.accept()
+                # DEBUG
+                curr_time = dt.now().strftime("%S.%f")
+                print(f"Connection accepted at time {curr_time}...")
 
                 # open the connection to the client
                 with conn:
@@ -168,9 +181,18 @@ def connectionHandler(cameraStatus, eventStatus, diskImages, logger):
                         conn.sendall(STANDBY_RESP)
                     # Triggers an event and doesn't continue function till even completed
                     elif data == EVENT:
+                        # DEBUG
+                        curr_time = dt.now().strftime("%S.%f")
+                        print(f"Pre-sleep eventStatus time: {curr_time}")
+
                         # Wait for time for full event to complete
-                        sleep(EVENT_DELAY)
+                        time.sleep(EVENT_DELAY)
                         eventStatus.value, cameraStatus.value = True, True
+
+                        # DEBUG
+                        curr_time = dt.now().strftime("%S.%f")
+                        print(f"Post-sleep eventStatus time: {curr_time}")
+
                         while eventStatus.value:
                             continue
                         conn.sendall(EVENT_RESP)
