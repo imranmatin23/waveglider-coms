@@ -12,6 +12,7 @@ capture images (EVENT).
 
 import socket
 import logging
+from mSBC_config import *
 
 
 def createLogger():
