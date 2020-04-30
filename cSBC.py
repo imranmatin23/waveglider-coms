@@ -1,81 +1,47 @@
-# Author: Imran Matin
-# Description:
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""One line statement.
 
-## Main libraries
-# Handles multiprocessing
-from multiprocessing import Process, Value
-import logging
-import shutil
+Author: Imran Matin
 
-## Camera libraries
-# Import deque data structure to store rolling images
-from collections import deque
+File is...
+"""
 
-# Import OpenCV
-import cv2
-
-# Import calls to handle camera
-import EasyPySpin
-
-# Import os to create paths to store images at
 import os
-
-## Server libraries
-# Import socket module
+import time
 import socket
-
-# Import JSON module to load dict from string
-import json
-
-# Import sys to handle exceptions
-import sys
-
-# Import datetime to know current system time
-from datetime import datetime as dt
-
-# Import sleep to allow for program execution stopping
-from time import sleep
-
-
-## Camera constants
-# Maximum number of images in rolling buffer at once
-ROLL_BUF_SIZE = 100
-# Location of image directory to save images
-IMG_DIR = "images"
-# Type of image to save to disk
-IMG_TYPE = ".png"
-
-## Server constants
-# The server's hostname or IP address
-HOST = "127.0.0.1"
-# The port used by the server
-PORT = 65431
-# number of connections that will be allowed to queue for this server
-NUM_CONN = 1
-
-# Name of file to log to
-LOG_FILE = "logs/cSBC.log"
-FILEMODE = "w"
-LOGGER_NAME = "cSBC Logger"
-MESSAGE_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-
-# Responses to client
-STANDBY_RESP = b"Server set to STANDBY."
-EVENT_RESP = b"EVENT captured."
-SHUTDOWN_RESP = b"Server SHUTDOWN. Captured %d images in total."
-
-#### DATA TRANSFER FORMAT DEFINED HERE ####
-# Define commands to be recieved from client
-# STANDBY = '{"eventStatus": 0, "cameraStatus": 1}'
-# EVENT = '{"eventStatus": 1, "cameraStatus": 1}'
-# SHUTDOWN = '{"eventStatus": 0, "cameraStatus": 0}'
-STANDBY = "STANDBY"
-EVENT = "EVENT"
-SHUTDOWN = "SHUTDOWN"
+import shutil
+import logging
+import datetime
+import EasyPySpin
+import multiprocessing as mp
+from collections import deque
+from cSBC_config import *
 
 
 def createLogger():
-    """Create logger for this SBC."""
+    """Create logger for this SBC.
+
+    It sets the basic configuration for the logger.
+
+    ...
+
+    Parameters
+    ----------
+    param1 : int
+        The first parameter.
+
+    Returns
+    -------
+    logger
+        Returns a logger with the specified name.
+
+    Raises
+    ------
+    OSError
+        list of all exceptions that are relevant to the interface.
+
+    """
     logging.basicConfig(
         filename=LOG_FILE, filemode=FILEMODE, format=MESSAGE_FORMAT, level=logging.DEBUG
     )
@@ -83,7 +49,7 @@ def createLogger():
 
 
 def createDatetimePath():
-    dtime_str = dt.now().isoformat().replace(":", "-").replace(".", "-")
+    dtime_str = datetime.datetime.now().isoformat().replace(":", "-").replace(".", "-")
     dtime_path = os.path.join(IMG_DIR, dtime_str)
     os.mkdir(dtime_path)
     return dtime_path
@@ -127,6 +93,7 @@ def captureImages(cameraStatus, eventStatus, diskImages, logger):
             elif cameraStatus.value and eventStatus.value:
 
                 writeImages(rollBuf, diskImages, logger)
+                rollBuf.clear()
                 eventStatus.value = False
             # release the camera and exit
             else:
@@ -142,19 +109,21 @@ def captureImages(cameraStatus, eventStatus, diskImages, logger):
 def connectionHandler(cameraStatus, eventStatus, diskImages, logger):
     """Handles commands from mSBC and directs controls to do correct events."""
     try:
-        # open a socket for this server, bind to port and wait for connection
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-            s.bind((HOST, PORT))
-            s.listen(NUM_CONN)
-            while True:
+        while True:
+            # open a socket for this server, bind to port and wait for connection
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                s.bind((HOST, PORT))
+                s.listen(NUM_CONN)
+
                 logger.info("Waiting for connection...")
                 logger.info(
                     f"eventStatus is {eventStatus.value}. cameraStatus is {cameraStatus.value}."
                 )
 
-                # Establish connection with client. Waits here until client attempts to attach
+                # Establish connection with client. Closes socket to disallow for more connections
                 conn, addr = s.accept()
+                s.close()
 
                 # open the connection to the client
                 with conn:
@@ -169,7 +138,7 @@ def connectionHandler(cameraStatus, eventStatus, diskImages, logger):
                     # Triggers an event and doesn't continue function till even completed
                     elif data == EVENT:
                         # Wait for time for full event to complete
-                        sleep(EVENT_DELAY)
+                        time.sleep(EVENT_DELAY)
                         eventStatus.value, cameraStatus.value = True, True
                         while eventStatus.value:
                             continue
@@ -187,9 +156,9 @@ if __name__ == "__main__":
     """Initalizes shared variables and Processes. Terminates camera, socket, main processes in that order."""
     try:
         # shared variable across processes
-        cameraStatus = Value("i", True)
-        eventStatus = Value("i", False)
-        diskImages = Value("i", 0)
+        cameraStatus = mp.Value("i", True)
+        eventStatus = mp.Value("i", False)
+        diskImages = mp.Value("i", 0)
 
         # create logger
         logger = createLogger()
@@ -200,11 +169,11 @@ if __name__ == "__main__":
         os.mkdir(IMG_DIR)
 
         # create a process with a target function
-        p1 = Process(
+        p1 = mp.Process(
             target=connectionHandler,
             args=(cameraStatus, eventStatus, diskImages, logger,),
         )
-        p2 = Process(
+        p2 = mp.Process(
             target=captureImages, args=(cameraStatus, eventStatus, diskImages, logger,)
         )
 

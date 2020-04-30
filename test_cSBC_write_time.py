@@ -1,9 +1,6 @@
 # Author: Imran Matin
 # Description: This file tests how long it takes to write images to disk.
 
-# DEBUG
-import time
-
 ## Main libraries
 # Handles multiprocessing
 from multiprocessing import Process, Value
@@ -36,6 +33,9 @@ import sys
 # Import datetime to know current system time
 from datetime import datetime as dt
 
+# Import sleep to allow for program execution stopping
+from time import sleep
+
 
 ## Camera constants
 # Maximum number of images in rolling buffer at once
@@ -44,6 +44,8 @@ ROLL_BUF_SIZE = 100
 IMG_DIR = "images"
 # Type of image to save to disk
 IMG_TYPE = ".png"
+# Amount of time in seconds to wait after event occurs
+EVENT_DELAY = 3
 
 ## Server constants
 # The server's hostname or IP address
@@ -51,7 +53,7 @@ HOST = "127.0.0.1"
 # The port used by the server
 PORT = 65431
 # number of connections that will be allowed to queue for this server
-NUM_CONN = 1
+NUM_CONN = 0
 
 # Name of file to log to
 LOG_FILE = "logs/cSBC.log"

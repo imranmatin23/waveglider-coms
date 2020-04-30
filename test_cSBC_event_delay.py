@@ -1,9 +1,6 @@
 # Author: Imran Matin
 # Description: This file tests how long it takes to write images to disk.
 
-# DEBUG
-import time
-
 ## Main libraries
 # Handles multiprocessing
 from multiprocessing import Process, Value
@@ -36,6 +33,9 @@ import sys
 # Import datetime to know current system time
 from datetime import datetime as dt
 
+# Import sleep to allow for program execution stopping
+from time import sleep
+
 
 ## Camera constants
 # Maximum number of images in rolling buffer at once
@@ -53,7 +53,7 @@ HOST = "127.0.0.1"
 # The port used by the server
 PORT = 65431
 # number of connections that will be allowed to queue for this server
-NUM_CONN = 1
+NUM_CONN = 0
 
 # Name of file to log to
 LOG_FILE = "logs/cSBC.log"
@@ -163,7 +163,8 @@ def connectionHandler(cameraStatus, eventStatus, diskImages, logger):
                 logger.info(
                     f"eventStatus is {eventStatus.value}. cameraStatus is {cameraStatus.value}."
                 )
-                # Establish connection with client. Waits here until client attempts to attach
+
+                # Establish connection with client. Closes socket to disallow for more connections
                 conn, addr = s.accept()
                 # DEBUG
                 curr_time = dt.now().strftime("%S.%f")
@@ -186,7 +187,7 @@ def connectionHandler(cameraStatus, eventStatus, diskImages, logger):
                         print(f"Pre-sleep eventStatus time: {curr_time}")
 
                         # Wait for time for full event to complete
-                        time.sleep(EVENT_DELAY)
+                        sleep(EVENT_DELAY)
                         eventStatus.value, cameraStatus.value = True, True
 
                         # DEBUG
