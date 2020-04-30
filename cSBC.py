@@ -24,8 +24,6 @@ def createLogger():
 
     It sets the basic configuration for the logger.
 
-    ...
-
     Parameters
     ----------
     param1 : int

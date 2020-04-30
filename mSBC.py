@@ -1,43 +1,40 @@
-# Laboratory: IMT, MPL Laboratory
-# Researchers: Grant Deane and Dale Stokes
-# Author: Imran Matin
-# Description: The client on the WaveGlider will be the mSBC. The reason for this is because
-# it will inly be run when it needs to issue commands to the cSBCs. As a client it will connect
-# to the cSBCs when it needs to issue a command to turn on (STANDBY), turn off (SHUTOFF), or
-# capture images (EVENT).
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""One line statement.
 
-# Import socket module
+Author: Imran Matin
+
+The client on the WaveGlider will be the mSBC. The reason for this is because
+it will inly be run when it needs to issue commands to the cSBCs. As a client it will connect
+to the cSBCs when it needs to issue a command to turn on (STANDBY), turn off (SHUTOFF), or
+capture images (EVENT).
+"""
+
 import socket
 import logging
 
-# The server's hostname or IP address
-HOST = "127.0.0.1"
-# The port used by the server
-PORT = 65431
-# Name of file to log to
-LOG_FILE = "logs/mSBC.log"
-FILEMODE = "w"
-LOGGER_NAME = "mSBC Logger"
-MESSAGE_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-
-# User strings
-PROMPT = "What command would you like to send? [0:standby,1:event,2:shutdown]: "
-
-#### DATA TRANSFER FORMAT DEFINED HERE ####
-# define user choices
-STANDBY = "0"
-EVENT = "1"
-SHUTDOWN = "2"
-# COMMANDS = {
-#     STANDBY: b'{"eventStatus": 0, "cameraStatus": 1}',
-#     EVENT: b'{"eventStatus": 1, "cameraStatus": 1}',
-#     SHUTDOWN: b'{"eventStatus": 0, "cameraStatus": 0}'
-# }
-COMMANDS = {STANDBY: b"STANDBY", EVENT: b"EVENT", SHUTDOWN: b"SHUTDOWN"}
-
 
 def createLogger():
-    """Create logger for this SBC."""
+    """Create logger for this SBC.
+
+    It sets the basic configuration for the logger.
+
+    Parameters
+    ----------
+    param1 : int
+        The first parameter.
+
+    Returns
+    -------
+    logger
+        Returns a logger with the specified name.
+
+    Raises
+    ------
+    OSError
+        list of all exceptions that are relevant to the interface.
+
+    """
     logging.basicConfig(
         filename=LOG_FILE, filemode=FILEMODE, format=MESSAGE_FORMAT, level=logging.DEBUG
     )
