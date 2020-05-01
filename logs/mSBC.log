@@ -1,16 +1,4 @@
-2020-04-30 14:34:21,319 - mSBC Logger - INFO - Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
-2020-04-30 14:34:21,319 - mSBC Logger - INFO - Sent b'STANDBY' to cSBC.
-2020-04-30 14:34:22,566 - mSBC Logger - INFO - Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
-2020-04-30 14:34:22,567 - mSBC Logger - INFO - Sent b'STANDBY' to cSBC.
-2020-04-30 14:34:24,245 - mSBC Logger - INFO - Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
-2020-04-30 14:34:24,245 - mSBC Logger - INFO - Sent b'EVENT' to cSBC.
-2020-04-30 14:34:24,862 - mSBC Logger - ERROR - [Errno 111] Connection refused
-2020-04-30 14:34:25,606 - mSBC Logger - ERROR - [Errno 111] Connection refused
-2020-04-30 14:34:26,339 - mSBC Logger - ERROR - [Errno 111] Connection refused
-2020-04-30 14:34:27,291 - mSBC Logger - ERROR - [Errno 111] Connection refused
-2020-04-30 14:34:28,067 - mSBC Logger - INFO - Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
-2020-04-30 14:34:28,068 - mSBC Logger - INFO - Sent b'EVENT' to cSBC.
-2020-04-30 14:34:30,048 - mSBC Logger - ERROR - [Errno 111] Connection refused
-2020-04-30 14:34:31,028 - mSBC Logger - ERROR - [Errno 111] Connection refused
-2020-04-30 14:34:32,163 - mSBC Logger - INFO - Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
-2020-04-30 14:34:32,164 - mSBC Logger - INFO - Sent b'SHUTDOWN' to cSBC.
+2020-04-30 15:03:22,419 - mSBC Logger - ERROR - [Errno 111] Connection refused
+2020-04-30 15:03:25,109 - mSBC Logger - ERROR - [Errno 111] Connection refused
+2020-04-30 15:04:14,217 - mSBC Logger - INFO - Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
+2020-04-30 15:04:14,218 - mSBC Logger - INFO - Sent b'SHUTDOWN' to cSBC.

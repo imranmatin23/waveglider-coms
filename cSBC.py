@@ -63,7 +63,7 @@ def writeImages(rollBuf, diskImages, logger):
         dtime_path = createDatetimePath()
         # reverse rolling buffer to get last image captured first and write to disk
         for img in list(reversed(rollBuf)):
-            img_str = f"img_{num_captured}.png"
+            img_str = f"img_{num_captured}" + IMG_TYPE
             img.tofile(os.path.join(dtime_path, img_str))
             # increment counters and log writ
             diskImages.value += 1
@@ -90,8 +90,7 @@ def captureImages(cameraStatus, eventStatus, diskImages, logger):
                 rollBuf.append(img)
             # write images when event triggered
             elif cameraStatus.value and eventStatus.value:
-
-                writeImages(rollBuf, diskImages, logger)
+                num_captured = writeImages(rollBuf, diskImages, logger)
                 rollBuf.clear()
                 eventStatus.value = False
             # release the camera and exit
