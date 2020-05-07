@@ -5,23 +5,27 @@
 HOST = "127.0.0.1"
 # The port used by the server
 PORT = 65431
+
+
+########### Logging Constants ###########
 # Name of file to log to
 LOG_FILE = "logs/mSBC.log"
 FILEMODE = "w"
 LOGGER_NAME = "mSBC Logger"
-MESSAGE_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+DATE_FORMAT = "%Y-%m-%dT%H:%M:%S"
+MESSAGE_FORMAT = "%(asctime)s.%(msecs)03d # %(name)s # %(levelname)s # %(message)s"
+
 
 # User strings
-PROMPT = "What command would you like to send? [0:standby,1:event,2:shutdown]: "
+PROMPT = "What command would you like to send? [u,e,s]: "
 
 #### DATA TRANSFER FORMAT DEFINED HERE ####
 # define user choices
-STANDBY = "0"
-EVENT = "1"
-SHUTDOWN = "2"
-# COMMANDS = {
-#     STANDBY: b'{"eventStatus": 0, "cameraStatus": 1}',
-#     EVENT: b'{"eventStatus": 1, "cameraStatus": 1}',
-#     SHUTDOWN: b'{"eventStatus": 0, "cameraStatus": 0}'
-# }
-COMMANDS = {STANDBY: b"STANDBY", EVENT: b"EVENT", SHUTDOWN: b"SHUTDOWN"}
+UPTIME = "u"
+EVENT = "e"
+SHUTDOWN = "s"
+COMMANDS = {
+    UPTIME: b"UPTIME",
+    EVENT: b"EVENT",
+    SHUTDOWN: b"SHUTDOWN",
+}

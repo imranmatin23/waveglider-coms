@@ -37,7 +37,11 @@ def createLogger():
 
     """
     logging.basicConfig(
-        filename=LOG_FILE, filemode=FILEMODE, format=MESSAGE_FORMAT, level=logging.DEBUG
+        filename=LOG_FILE,
+        filemode=FILEMODE,
+        format=MESSAGE_FORMAT,
+        datefmt=DATE_FORMAT,
+        level=logging.DEBUG,
     )
     return logging.getLogger(LOGGER_NAME)
 
@@ -48,8 +52,8 @@ def readInput(logger):
         userInput = input(PROMPT)
         valid = True
 
-        if userInput == STANDBY:
-            command = COMMANDS[STANDBY]
+        if userInput == UPTIME:
+            command = COMMANDS[UPTIME]
         elif userInput == EVENT:
             command = COMMANDS[EVENT]
         elif userInput == SHUTDOWN:
@@ -88,8 +92,10 @@ def clientSend(logger):
                 logger.info(f"Sent {command} to cSBC.")
 
                 # wait till recieve stats back from server
-                # stats = s.recv(4096).decode("utf-8")
-                # logger.info(f"Recieved: {stats}")
+                # cannot send another command until recieve response
+                # if this line is commented out, cSBC will still not accept new commands until processed previous command completely
+                stats = s.recv(4096).decode("utf-8")
+                logger.info(f"Recieved: {stats}")
 
             # break forever loop if shutdown entered
             if command == COMMANDS[SHUTDOWN]:
@@ -107,4 +113,5 @@ def clientSend(logger):
 if __name__ == "__main__":
     """Create the logger and send messages to cSBC."""
     logger = createLogger()
+    logger.debug(f"Logger created for {__file__}.")
     clientSend(logger)

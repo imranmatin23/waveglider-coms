@@ -142,6 +142,40 @@ def captureImages(cameraStatus, eventStatus, diskImages, logger):
         logger.info("Successfully released camera.")
 
 
+def performCommand(conn, cameraStatus, eventStatus, diskImages, logger):
+    """Handle command."""
+    try:
+        # open the connection to the client
+        with conn:
+            data = conn.recv(4096).decode("utf-8")
+            logger.debug(f"Recieved {data}.")
+
+            # get uptime of the system
+            if data == UPTIME:
+                uptime = round(time.time() - startTime, 6)
+                conn.sendall(UPTIME_RESP % uptime)
+                logger.debug(f"The current uptime is {uptime} seconds.")
+
+            # Triggers an event and doesn't continue function till even completed
+            elif data == EVENT:
+                # Wait for time for full event to complete
+                time.sleep(EVENT_DELAY)
+                eventStatus.value, cameraStatus.value = True, True
+                while eventStatus.value:
+                    continue
+                conn.sendall(EVENT_RESP)
+
+            # Shutsdown cSBC
+            elif data == SHUTDOWN:
+                eventStatus.value, cameraStatus.value = False, False
+                conn.sendall(SHUTDOWN_RESP % diskImages.value)
+                return True
+
+        return False
+    except:
+        logger.error("Exception occurred", exc_info=True)
+
+
 def connectionHandler(cameraStatus, eventStatus, diskImages, logger):
     """Handles commands from mSBC and directs controls to do correct events."""
     try:
@@ -160,28 +194,10 @@ def connectionHandler(cameraStatus, eventStatus, diskImages, logger):
                     f"Acccepted connection from {conn}-{addr} and closed server socket."
                 )
 
-                # open the connection to the client
-                with conn:
-                    data = conn.recv(4096).decode("utf-8")
-                    logger.debug(f"Recieved {data}.")
+                # handle connection and break if shutdown recieved
+                if performCommand(conn, cameraStatus, eventStatus, diskImages, logger):
+                    break
 
-                    # Sets cSBC to STANDBY mode
-                    if data == STANDBY:
-                        eventStatus.value, cameraStatus.value = False, True
-                        conn.sendall(STANDBY_RESP)
-                    # Triggers an event and doesn't continue function till even completed
-                    elif data == EVENT:
-                        # Wait for time for full event to complete
-                        time.sleep(EVENT_DELAY)
-                        eventStatus.value, cameraStatus.value = True, True
-                        while eventStatus.value:
-                            continue
-                        conn.sendall(EVENT_RESP)
-                    # Shutsdown cSBC
-                    elif data == SHUTDOWN:
-                        eventStatus.value, cameraStatus.value = False, False
-                        conn.sendall(SHUTDOWN_RESP % diskImages.value)
-                        break
     except:
         logger.error("Exception occurred", exc_info=True)
 
@@ -189,6 +205,10 @@ def connectionHandler(cameraStatus, eventStatus, diskImages, logger):
 if __name__ == "__main__":
     """Initalizes shared variables and Processes. Terminates camera, socket, main processes in that order."""
     try:
+        # track start time
+        global startTime
+        startTime = time.time()
+
         # shared variable across processes
         cameraStatus = mp.Value("i", True)
         eventStatus = mp.Value("i", False)

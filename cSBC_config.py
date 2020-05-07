@@ -40,15 +40,12 @@ MESSAGE_FORMAT = "%(asctime)s.%(msecs)03d # %(name)s # %(levelname)s # %(message
 
 ########### COMMANDS ###########
 # Responses to client
-STANDBY_RESP = b"Server set to STANDBY."
+UPTIME_RESP = b"The server's uptime is %0.6f seconds."
 EVENT_RESP = b"EVENT captured."
 SHUTDOWN_RESP = b"Server SHUTDOWN. Captured %d images in total."
 
+
 #### DATA TRANSFER FORMAT DEFINED HERE ####
-# Define commands to be recieved from client
-# STANDBY = '{"eventStatus": 0, "cameraStatus": 1}'
-# EVENT = '{"eventStatus": 1, "cameraStatus": 1}'
-# SHUTDOWN = '{"eventStatus": 0, "cameraStatus": 0}'
-STANDBY = "STANDBY"
+UPTIME = "UPTIME"
 EVENT = "EVENT"
 SHUTDOWN = "SHUTDOWN"
