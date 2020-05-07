@@ -10,8 +10,10 @@ to the cSBCs when it needs to issue a command to turn on (STANDBY), turn off (SH
 capture images (EVENT).
 """
 
+import time
 import socket
 import logging
+import sys
 from mSBC_config import *
 
 
@@ -76,6 +78,9 @@ def readInput(logger):
 
 def sendData(command, logger):
     try:
+        # allow for connection server to begin listening again
+        time.sleep(0.1)
+
         # open a socket for this client
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             # connect to the server
@@ -96,6 +101,7 @@ def sendData(command, logger):
         logger.error(e)
     except:
         logger.error("Fatal Exception occurred", exc_info=True)
+        sys.exit()
 
 
 def clientSend(logger):

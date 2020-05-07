@@ -1,210 +1,269 @@
-2020-05-07T14:24:35.129 # cSBC Logger # DEBUG # Logger created for cSBC.py.
-2020-05-07T14:24:35.171 # cSBC Logger # DEBUG # New image directory created at images.
-2020-05-07T14:24:35.178 # cSBC Logger # DEBUG # <Process(Process-1, started)>.
-2020-05-07T14:24:35.185 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:24:35.186 # cSBC Logger # DEBUG # <Process(Process-2, started)>.
-2020-05-07T14:24:37.073 # cSBC Logger # DEBUG # Created <EasyPySpin.EasyPySpin.VideoCapture object at 0x7fb6fbb37810>
-2020-05-07T14:24:37.102 # cSBC Logger # DEBUG # Camera Exposure: 99998.0
-2020-05-07T14:24:37.103 # cSBC Logger # DEBUG # Camera Gain: 9.998811256880494
-2020-05-07T14:24:37.104 # cSBC Logger # DEBUG # Camera Brightness: 3.0
-2020-05-07T14:24:37.105 # cSBC Logger # DEBUG # Camera Gamma: 0.25
-2020-05-07T14:24:37.107 # cSBC Logger # DEBUG # Camera FPS: 7.9995223325224805
-2020-05-07T14:24:37.107 # cSBC Logger # DEBUG # Camera Backlight: True
-2020-05-07T14:24:37.109 # cSBC Logger # DEBUG # Camera Frame Width: 2448
-2020-05-07T14:24:37.111 # cSBC Logger # DEBUG # Camera Frame Height: 2048
-2020-05-07T14:24:37.114 # cSBC Logger # DEBUG # Camera Temperature: 49.0
-2020-05-07T14:24:37.114 # cSBC Logger # DEBUG # Created deque([], maxlen=150)
-2020-05-07T14:24:37.115 # cSBC Logger # DEBUG # Capturing images.
-2020-05-07T14:24:42.254 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41350)>-('127.0.0.1', 41350) and closed server socket.
-2020-05-07T14:24:42.256 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:24:42.257 # cSBC Logger # DEBUG # The current uptime is 7.140098 seconds.
-2020-05-07T14:24:42.259 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:24:42.360 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41352)>-('127.0.0.1', 41352) and closed server socket.
-2020-05-07T14:24:42.360 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:24:42.361 # cSBC Logger # DEBUG # The current uptime is 7.244164 seconds.
-2020-05-07T14:24:42.361 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:24:42.541 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41354)>-('127.0.0.1', 41354) and closed server socket.
-2020-05-07T14:24:42.542 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:24:42.543 # cSBC Logger # DEBUG # The current uptime is 7.425823 seconds.
-2020-05-07T14:24:42.544 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:24:42.644 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41356)>-('127.0.0.1', 41356) and closed server socket.
-2020-05-07T14:24:42.644 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:24:42.645 # cSBC Logger # DEBUG # The current uptime is 7.528191 seconds.
-2020-05-07T14:24:42.645 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:24:42.747 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41358)>-('127.0.0.1', 41358) and closed server socket.
-2020-05-07T14:24:42.748 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:24:42.749 # cSBC Logger # DEBUG # The current uptime is 7.63157 seconds.
-2020-05-07T14:24:42.750 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:24:42.850 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41360)>-('127.0.0.1', 41360) and closed server socket.
-2020-05-07T14:24:42.851 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:24:42.852 # cSBC Logger # DEBUG # The current uptime is 7.734475 seconds.
-2020-05-07T14:24:42.853 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:24:42.953 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41362)>-('127.0.0.1', 41362) and closed server socket.
-2020-05-07T14:24:42.954 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:24:42.954 # cSBC Logger # DEBUG # The current uptime is 7.837533 seconds.
-2020-05-07T14:24:42.955 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:24:43.057 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41364)>-('127.0.0.1', 41364) and closed server socket.
-2020-05-07T14:24:43.058 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:24:43.058 # cSBC Logger # DEBUG # The current uptime is 7.941316 seconds.
-2020-05-07T14:24:43.058 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:24:43.161 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41366)>-('127.0.0.1', 41366) and closed server socket.
-2020-05-07T14:24:43.161 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:24:43.161 # cSBC Logger # DEBUG # The current uptime is 8.04484 seconds.
-2020-05-07T14:24:43.162 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:24:43.352 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41368)>-('127.0.0.1', 41368) and closed server socket.
-2020-05-07T14:24:43.353 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:24:43.353 # cSBC Logger # DEBUG # The current uptime is 8.236448 seconds.
-2020-05-07T14:24:43.354 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:24:43.455 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41370)>-('127.0.0.1', 41370) and closed server socket.
-2020-05-07T14:24:43.456 # cSBC Logger # DEBUG # Recieved EVENT.
-2020-05-07T14:24:48.577 # cSBC Logger # DEBUG # Writing images to disk.
-2020-05-07T14:24:48.933 # cSBC Logger # DEBUG # Wrote 81 images to disk at images/2020-05-07T14:24:48.578406.
-2020-05-07T14:24:48.934 # cSBC Logger # DEBUG # Cleared rolling buffer.
-2020-05-07T14:24:48.934 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:26.847 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41394)>-('127.0.0.1', 41394) and closed server socket.
-2020-05-07T14:26:26.848 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:26.848 # cSBC Logger # DEBUG # The current uptime is 111.731819 seconds.
-2020-05-07T14:26:26.849 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:26.951 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41396)>-('127.0.0.1', 41396) and closed server socket.
-2020-05-07T14:26:26.952 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:26.952 # cSBC Logger # DEBUG # The current uptime is 111.835726 seconds.
-2020-05-07T14:26:26.953 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:27.054 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41398)>-('127.0.0.1', 41398) and closed server socket.
-2020-05-07T14:26:27.054 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:27.055 # cSBC Logger # DEBUG # The current uptime is 111.938324 seconds.
-2020-05-07T14:26:27.056 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:32.314 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41402)>-('127.0.0.1', 41402) and closed server socket.
-2020-05-07T14:26:32.314 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:32.315 # cSBC Logger # DEBUG # The current uptime is 117.198112 seconds.
-2020-05-07T14:26:32.315 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:32.419 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41404)>-('127.0.0.1', 41404) and closed server socket.
-2020-05-07T14:26:32.420 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:32.421 # cSBC Logger # DEBUG # The current uptime is 117.304367 seconds.
-2020-05-07T14:26:32.422 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:32.525 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41406)>-('127.0.0.1', 41406) and closed server socket.
-2020-05-07T14:26:32.526 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:32.526 # cSBC Logger # DEBUG # The current uptime is 117.409491 seconds.
-2020-05-07T14:26:32.527 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:32.628 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41408)>-('127.0.0.1', 41408) and closed server socket.
-2020-05-07T14:26:32.628 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:32.629 # cSBC Logger # DEBUG # The current uptime is 117.511981 seconds.
-2020-05-07T14:26:32.629 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:32.731 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41410)>-('127.0.0.1', 41410) and closed server socket.
-2020-05-07T14:26:32.731 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:32.733 # cSBC Logger # DEBUG # The current uptime is 117.614621 seconds.
-2020-05-07T14:26:32.734 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:32.834 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41412)>-('127.0.0.1', 41412) and closed server socket.
-2020-05-07T14:26:32.834 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:32.836 # cSBC Logger # DEBUG # The current uptime is 117.717918 seconds.
-2020-05-07T14:26:32.837 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:32.936 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41414)>-('127.0.0.1', 41414) and closed server socket.
-2020-05-07T14:26:32.936 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:32.937 # cSBC Logger # DEBUG # The current uptime is 117.82009 seconds.
-2020-05-07T14:26:32.937 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:33.041 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41416)>-('127.0.0.1', 41416) and closed server socket.
-2020-05-07T14:26:33.041 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:33.042 # cSBC Logger # DEBUG # The current uptime is 117.924677 seconds.
-2020-05-07T14:26:33.043 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:33.143 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41418)>-('127.0.0.1', 41418) and closed server socket.
-2020-05-07T14:26:33.143 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:33.144 # cSBC Logger # DEBUG # The current uptime is 118.027272 seconds.
-2020-05-07T14:26:33.144 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:33.246 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41420)>-('127.0.0.1', 41420) and closed server socket.
-2020-05-07T14:26:33.246 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:33.248 # cSBC Logger # DEBUG # The current uptime is 118.1301 seconds.
-2020-05-07T14:26:33.249 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:39.803 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41422)>-('127.0.0.1', 41422) and closed server socket.
-2020-05-07T14:26:39.804 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:39.806 # cSBC Logger # DEBUG # The current uptime is 124.688194 seconds.
-2020-05-07T14:26:39.807 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:39.908 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41424)>-('127.0.0.1', 41424) and closed server socket.
-2020-05-07T14:26:39.908 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:39.910 # cSBC Logger # DEBUG # The current uptime is 124.791821 seconds.
-2020-05-07T14:26:39.910 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:40.011 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41426)>-('127.0.0.1', 41426) and closed server socket.
-2020-05-07T14:26:40.011 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:40.012 # cSBC Logger # DEBUG # The current uptime is 124.894964 seconds.
-2020-05-07T14:26:40.013 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:40.114 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41428)>-('127.0.0.1', 41428) and closed server socket.
-2020-05-07T14:26:40.114 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:40.116 # cSBC Logger # DEBUG # The current uptime is 124.997986 seconds.
-2020-05-07T14:26:40.117 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:40.217 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41430)>-('127.0.0.1', 41430) and closed server socket.
-2020-05-07T14:26:40.217 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:40.219 # cSBC Logger # DEBUG # The current uptime is 125.101203 seconds.
-2020-05-07T14:26:40.220 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:40.320 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41432)>-('127.0.0.1', 41432) and closed server socket.
-2020-05-07T14:26:40.321 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:40.322 # cSBC Logger # DEBUG # The current uptime is 125.204493 seconds.
-2020-05-07T14:26:40.323 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:40.424 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41434)>-('127.0.0.1', 41434) and closed server socket.
-2020-05-07T14:26:40.424 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:40.425 # cSBC Logger # DEBUG # The current uptime is 125.307859 seconds.
-2020-05-07T14:26:40.426 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:40.528 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41436)>-('127.0.0.1', 41436) and closed server socket.
-2020-05-07T14:26:40.529 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:40.530 # cSBC Logger # DEBUG # The current uptime is 125.412316 seconds.
-2020-05-07T14:26:40.530 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:40.632 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41438)>-('127.0.0.1', 41438) and closed server socket.
-2020-05-07T14:26:40.632 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:40.633 # cSBC Logger # DEBUG # The current uptime is 125.516043 seconds.
-2020-05-07T14:26:40.634 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:40.735 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41440)>-('127.0.0.1', 41440) and closed server socket.
-2020-05-07T14:26:40.737 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:40.738 # cSBC Logger # DEBUG # The current uptime is 125.620406 seconds.
-2020-05-07T14:26:40.738 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:40.840 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41442)>-('127.0.0.1', 41442) and closed server socket.
-2020-05-07T14:26:40.840 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:40.841 # cSBC Logger # DEBUG # The current uptime is 125.723824 seconds.
-2020-05-07T14:26:40.842 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:40.943 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41444)>-('127.0.0.1', 41444) and closed server socket.
-2020-05-07T14:26:40.943 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:26:40.943 # cSBC Logger # DEBUG # The current uptime is 125.826785 seconds.
-2020-05-07T14:26:40.944 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:41.049 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41446)>-('127.0.0.1', 41446) and closed server socket.
-2020-05-07T14:26:41.049 # cSBC Logger # DEBUG # Recieved EVENT.
-2020-05-07T14:26:46.055 # cSBC Logger # DEBUG # Writing images to disk.
-2020-05-07T14:26:47.180 # cSBC Logger # DEBUG # Wrote 150 images to disk at images/2020-05-07T14:26:46.056356.
-2020-05-07T14:26:47.224 # cSBC Logger # DEBUG # Cleared rolling buffer.
-2020-05-07T14:26:47.225 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:26:47.327 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41450)>-('127.0.0.1', 41450) and closed server socket.
-2020-05-07T14:26:47.328 # cSBC Logger # DEBUG # Recieved EVENT.
-2020-05-07T14:26:52.362 # cSBC Logger # DEBUG # Writing images to disk.
-2020-05-07T14:26:52.507 # cSBC Logger # DEBUG # Wrote 39 images to disk at images/2020-05-07T14:26:52.362792.
-2020-05-07T14:26:52.508 # cSBC Logger # DEBUG # Cleared rolling buffer.
-2020-05-07T14:26:52.509 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:27:30.849 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41454)>-('127.0.0.1', 41454) and closed server socket.
-2020-05-07T14:27:30.852 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:27:30.852 # cSBC Logger # DEBUG # The current uptime is 175.735631 seconds.
-2020-05-07T14:27:30.853 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:27:30.958 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41456)>-('127.0.0.1', 41456) and closed server socket.
-2020-05-07T14:27:30.958 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:27:30.959 # cSBC Logger # DEBUG # The current uptime is 175.842111 seconds.
-2020-05-07T14:27:30.961 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:27:31.061 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41458)>-('127.0.0.1', 41458) and closed server socket.
-2020-05-07T14:27:31.062 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:27:31.062 # cSBC Logger # DEBUG # The current uptime is 175.945291 seconds.
-2020-05-07T14:27:31.063 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:27:31.164 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41460)>-('127.0.0.1', 41460) and closed server socket.
-2020-05-07T14:27:31.165 # cSBC Logger # DEBUG # Recieved EVENT.
-2020-05-07T14:27:36.216 # cSBC Logger # DEBUG # Writing images to disk.
-2020-05-07T14:27:37.236 # cSBC Logger # DEBUG # Wrote 150 images to disk at images/2020-05-07T14:27:36.216541.
-2020-05-07T14:27:37.258 # cSBC Logger # DEBUG # Cleared rolling buffer.
-2020-05-07T14:27:37.259 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:27:37.361 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41462)>-('127.0.0.1', 41462) and closed server socket.
-2020-05-07T14:27:37.361 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:27:37.362 # cSBC Logger # DEBUG # The current uptime is 182.245049 seconds.
-2020-05-07T14:27:37.362 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:27:37.465 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41464)>-('127.0.0.1', 41464) and closed server socket.
-2020-05-07T14:27:37.465 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:27:37.466 # cSBC Logger # DEBUG # The current uptime is 182.348925 seconds.
-2020-05-07T14:27:37.467 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:27:37.567 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41466)>-('127.0.0.1', 41466) and closed server socket.
-2020-05-07T14:27:37.567 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-07T14:27:37.568 # cSBC Logger # DEBUG # The current uptime is 182.451374 seconds.
-2020-05-07T14:27:37.569 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
-2020-05-07T14:27:37.670 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41468)>-('127.0.0.1', 41468) and closed server socket.
-2020-05-07T14:27:37.670 # cSBC Logger # DEBUG # Recieved SHUTDOWN.
-2020-05-07T14:27:39.837 # cSBC Logger # INFO # Successfully released camera.
-2020-05-07T14:27:39.864 # cSBC Logger # DEBUG # <Process(Process-2, stopped)>.
-2020-05-07T14:27:39.864 # cSBC Logger # DEBUG # <Process(Process-1, stopped)>.
+2020-05-07T14:38:42.002 # cSBC Logger # DEBUG # Logger created for cSBC.py.
+2020-05-07T14:38:42.141 # cSBC Logger # DEBUG # New image directory created at images.
+2020-05-07T14:38:42.149 # cSBC Logger # DEBUG # <Process(Process-1, started)>.
+2020-05-07T14:38:42.153 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:38:42.157 # cSBC Logger # DEBUG # <Process(Process-2, started)>.
+2020-05-07T14:38:43.947 # cSBC Logger # DEBUG # Created <EasyPySpin.EasyPySpin.VideoCapture object at 0x7f4dc835d650>
+2020-05-07T14:38:43.975 # cSBC Logger # DEBUG # Camera Exposure: 99998.0
+2020-05-07T14:38:43.976 # cSBC Logger # DEBUG # Camera Gain: 9.998811256880494
+2020-05-07T14:38:43.977 # cSBC Logger # DEBUG # Camera Brightness: 3.0
+2020-05-07T14:38:43.978 # cSBC Logger # DEBUG # Camera Gamma: 0.25
+2020-05-07T14:38:43.979 # cSBC Logger # DEBUG # Camera FPS: 7.9995223325224805
+2020-05-07T14:38:43.979 # cSBC Logger # DEBUG # Camera Backlight: True
+2020-05-07T14:38:43.981 # cSBC Logger # DEBUG # Camera Frame Width: 2448
+2020-05-07T14:38:43.982 # cSBC Logger # DEBUG # Camera Frame Height: 2048
+2020-05-07T14:38:43.984 # cSBC Logger # DEBUG # Camera Temperature: 50.375
+2020-05-07T14:38:43.984 # cSBC Logger # DEBUG # Created deque([], maxlen=150)
+2020-05-07T14:38:43.984 # cSBC Logger # DEBUG # Capturing images.
+2020-05-07T14:38:58.380 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41710)>-('127.0.0.1', 41710) and closed server socket.
+2020-05-07T14:38:58.381 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:38:58.383 # cSBC Logger # DEBUG # The current uptime is 16.397065 seconds.
+2020-05-07T14:38:58.384 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:38:58.484 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41712)>-('127.0.0.1', 41712) and closed server socket.
+2020-05-07T14:38:58.485 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:38:58.486 # cSBC Logger # DEBUG # The current uptime is 16.501196 seconds.
+2020-05-07T14:38:58.486 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:38:58.587 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41714)>-('127.0.0.1', 41714) and closed server socket.
+2020-05-07T14:38:58.587 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:38:58.588 # cSBC Logger # DEBUG # The current uptime is 16.603818 seconds.
+2020-05-07T14:38:58.588 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:38:58.690 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41716)>-('127.0.0.1', 41716) and closed server socket.
+2020-05-07T14:38:58.691 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:38:58.691 # cSBC Logger # DEBUG # The current uptime is 16.707191 seconds.
+2020-05-07T14:38:58.692 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:38:58.795 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41720)>-('127.0.0.1', 41720) and closed server socket.
+2020-05-07T14:38:58.796 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:38:58.796 # cSBC Logger # DEBUG # The current uptime is 16.812277 seconds.
+2020-05-07T14:38:58.797 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:38:58.901 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41722)>-('127.0.0.1', 41722) and closed server socket.
+2020-05-07T14:38:58.902 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:38:58.902 # cSBC Logger # DEBUG # The current uptime is 16.918001 seconds.
+2020-05-07T14:38:58.902 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:05.129 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41724)>-('127.0.0.1', 41724) and closed server socket.
+2020-05-07T14:39:05.129 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:05.130 # cSBC Logger # DEBUG # The current uptime is 23.146207 seconds.
+2020-05-07T14:39:05.132 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:05.238 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41726)>-('127.0.0.1', 41726) and closed server socket.
+2020-05-07T14:39:05.239 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:05.239 # cSBC Logger # DEBUG # The current uptime is 23.255109 seconds.
+2020-05-07T14:39:05.240 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:06.879 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41728)>-('127.0.0.1', 41728) and closed server socket.
+2020-05-07T14:39:06.880 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:06.880 # cSBC Logger # DEBUG # The current uptime is 24.896298 seconds.
+2020-05-07T14:39:06.881 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:06.986 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41730)>-('127.0.0.1', 41730) and closed server socket.
+2020-05-07T14:39:06.989 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:06.990 # cSBC Logger # DEBUG # The current uptime is 25.006011 seconds.
+2020-05-07T14:39:06.992 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:07.093 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41732)>-('127.0.0.1', 41732) and closed server socket.
+2020-05-07T14:39:07.094 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:07.095 # cSBC Logger # DEBUG # The current uptime is 25.11068 seconds.
+2020-05-07T14:39:07.097 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:07.197 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41734)>-('127.0.0.1', 41734) and closed server socket.
+2020-05-07T14:39:07.197 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:07.198 # cSBC Logger # DEBUG # The current uptime is 25.213689 seconds.
+2020-05-07T14:39:07.198 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:07.301 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41736)>-('127.0.0.1', 41736) and closed server socket.
+2020-05-07T14:39:07.301 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:07.302 # cSBC Logger # DEBUG # The current uptime is 25.317288 seconds.
+2020-05-07T14:39:07.302 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:07.406 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41738)>-('127.0.0.1', 41738) and closed server socket.
+2020-05-07T14:39:07.406 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:07.413 # cSBC Logger # DEBUG # The current uptime is 25.422851 seconds.
+2020-05-07T14:39:07.414 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:09.921 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41740)>-('127.0.0.1', 41740) and closed server socket.
+2020-05-07T14:39:09.922 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:09.923 # cSBC Logger # DEBUG # The current uptime is 27.938779 seconds.
+2020-05-07T14:39:09.923 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:10.028 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41742)>-('127.0.0.1', 41742) and closed server socket.
+2020-05-07T14:39:10.029 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:10.057 # cSBC Logger # DEBUG # The current uptime is 28.07255 seconds.
+2020-05-07T14:39:10.058 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:10.160 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41744)>-('127.0.0.1', 41744) and closed server socket.
+2020-05-07T14:39:10.161 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:10.161 # cSBC Logger # DEBUG # The current uptime is 28.177139 seconds.
+2020-05-07T14:39:10.162 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:10.263 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41746)>-('127.0.0.1', 41746) and closed server socket.
+2020-05-07T14:39:10.264 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:10.264 # cSBC Logger # DEBUG # The current uptime is 28.280067 seconds.
+2020-05-07T14:39:10.265 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:10.368 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41748)>-('127.0.0.1', 41748) and closed server socket.
+2020-05-07T14:39:10.369 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:10.371 # cSBC Logger # DEBUG # The current uptime is 28.385374 seconds.
+2020-05-07T14:39:10.371 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:10.472 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41750)>-('127.0.0.1', 41750) and closed server socket.
+2020-05-07T14:39:10.473 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:10.474 # cSBC Logger # DEBUG # The current uptime is 28.489586 seconds.
+2020-05-07T14:39:10.475 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:53.952 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41758)>-('127.0.0.1', 41758) and closed server socket.
+2020-05-07T14:39:53.952 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:53.953 # cSBC Logger # DEBUG # The current uptime is 71.96868 seconds.
+2020-05-07T14:39:53.953 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:54.057 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41760)>-('127.0.0.1', 41760) and closed server socket.
+2020-05-07T14:39:54.057 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:54.058 # cSBC Logger # DEBUG # The current uptime is 72.074239 seconds.
+2020-05-07T14:39:54.059 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:54.161 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41762)>-('127.0.0.1', 41762) and closed server socket.
+2020-05-07T14:39:54.162 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:54.162 # cSBC Logger # DEBUG # The current uptime is 72.178005 seconds.
+2020-05-07T14:39:54.162 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:54.263 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41764)>-('127.0.0.1', 41764) and closed server socket.
+2020-05-07T14:39:54.264 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:54.264 # cSBC Logger # DEBUG # The current uptime is 72.280283 seconds.
+2020-05-07T14:39:54.265 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:54.366 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41766)>-('127.0.0.1', 41766) and closed server socket.
+2020-05-07T14:39:54.367 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:54.368 # cSBC Logger # DEBUG # The current uptime is 72.384245 seconds.
+2020-05-07T14:39:54.370 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:39:54.474 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41768)>-('127.0.0.1', 41768) and closed server socket.
+2020-05-07T14:39:54.474 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:39:54.475 # cSBC Logger # DEBUG # The current uptime is 72.491211 seconds.
+2020-05-07T14:39:54.476 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:00.140 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41770)>-('127.0.0.1', 41770) and closed server socket.
+2020-05-07T14:40:00.142 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:00.143 # cSBC Logger # DEBUG # The current uptime is 78.15871 seconds.
+2020-05-07T14:40:00.143 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:00.248 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41772)>-('127.0.0.1', 41772) and closed server socket.
+2020-05-07T14:40:00.248 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:00.249 # cSBC Logger # DEBUG # The current uptime is 78.264364 seconds.
+2020-05-07T14:40:00.250 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:00.350 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41774)>-('127.0.0.1', 41774) and closed server socket.
+2020-05-07T14:40:00.351 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:00.351 # cSBC Logger # DEBUG # The current uptime is 78.367002 seconds.
+2020-05-07T14:40:00.351 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:00.454 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41776)>-('127.0.0.1', 41776) and closed server socket.
+2020-05-07T14:40:00.454 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:00.454 # cSBC Logger # DEBUG # The current uptime is 78.4705 seconds.
+2020-05-07T14:40:00.455 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:00.557 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41778)>-('127.0.0.1', 41778) and closed server socket.
+2020-05-07T14:40:00.557 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:00.557 # cSBC Logger # DEBUG # The current uptime is 78.57328 seconds.
+2020-05-07T14:40:00.558 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:00.659 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41780)>-('127.0.0.1', 41780) and closed server socket.
+2020-05-07T14:40:00.660 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:00.660 # cSBC Logger # DEBUG # The current uptime is 78.676074 seconds.
+2020-05-07T14:40:00.661 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:06.035 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41784)>-('127.0.0.1', 41784) and closed server socket.
+2020-05-07T14:40:06.035 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:06.036 # cSBC Logger # DEBUG # The current uptime is 84.052018 seconds.
+2020-05-07T14:40:06.038 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:06.140 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41786)>-('127.0.0.1', 41786) and closed server socket.
+2020-05-07T14:40:06.140 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:06.141 # cSBC Logger # DEBUG # The current uptime is 84.156831 seconds.
+2020-05-07T14:40:06.141 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:06.244 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41788)>-('127.0.0.1', 41788) and closed server socket.
+2020-05-07T14:40:06.244 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:06.244 # cSBC Logger # DEBUG # The current uptime is 84.260275 seconds.
+2020-05-07T14:40:06.245 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:46.234 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41794)>-('127.0.0.1', 41794) and closed server socket.
+2020-05-07T14:40:46.237 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:46.240 # cSBC Logger # DEBUG # The current uptime is 124.253497 seconds.
+2020-05-07T14:40:46.241 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:46.340 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41796)>-('127.0.0.1', 41796) and closed server socket.
+2020-05-07T14:40:46.341 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:46.341 # cSBC Logger # DEBUG # The current uptime is 124.357166 seconds.
+2020-05-07T14:40:46.342 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:50.396 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41800)>-('127.0.0.1', 41800) and closed server socket.
+2020-05-07T14:40:50.397 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:50.398 # cSBC Logger # DEBUG # The current uptime is 128.413954 seconds.
+2020-05-07T14:40:50.399 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:51.596 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41802)>-('127.0.0.1', 41802) and closed server socket.
+2020-05-07T14:40:51.597 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:51.597 # cSBC Logger # DEBUG # The current uptime is 129.613358 seconds.
+2020-05-07T14:40:51.598 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:51.701 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41804)>-('127.0.0.1', 41804) and closed server socket.
+2020-05-07T14:40:51.702 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:51.702 # cSBC Logger # DEBUG # The current uptime is 129.718388 seconds.
+2020-05-07T14:40:51.703 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:51.805 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41806)>-('127.0.0.1', 41806) and closed server socket.
+2020-05-07T14:40:51.807 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:51.808 # cSBC Logger # DEBUG # The current uptime is 129.823738 seconds.
+2020-05-07T14:40:51.809 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:51.910 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41808)>-('127.0.0.1', 41808) and closed server socket.
+2020-05-07T14:40:51.910 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:51.911 # cSBC Logger # DEBUG # The current uptime is 129.92655 seconds.
+2020-05-07T14:40:51.911 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:52.014 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41810)>-('127.0.0.1', 41810) and closed server socket.
+2020-05-07T14:40:52.014 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:52.015 # cSBC Logger # DEBUG # The current uptime is 130.030552 seconds.
+2020-05-07T14:40:52.015 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:53.826 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41812)>-('127.0.0.1', 41812) and closed server socket.
+2020-05-07T14:40:53.826 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:53.827 # cSBC Logger # DEBUG # The current uptime is 131.842679 seconds.
+2020-05-07T14:40:53.827 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:53.932 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41814)>-('127.0.0.1', 41814) and closed server socket.
+2020-05-07T14:40:53.932 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:53.933 # cSBC Logger # DEBUG # The current uptime is 131.949084 seconds.
+2020-05-07T14:40:53.934 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:54.036 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41816)>-('127.0.0.1', 41816) and closed server socket.
+2020-05-07T14:40:54.036 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:54.037 # cSBC Logger # DEBUG # The current uptime is 132.052541 seconds.
+2020-05-07T14:40:54.037 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:54.138 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41818)>-('127.0.0.1', 41818) and closed server socket.
+2020-05-07T14:40:54.138 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:54.139 # cSBC Logger # DEBUG # The current uptime is 132.154746 seconds.
+2020-05-07T14:40:54.140 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:54.240 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41820)>-('127.0.0.1', 41820) and closed server socket.
+2020-05-07T14:40:54.241 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:54.241 # cSBC Logger # DEBUG # The current uptime is 132.257299 seconds.
+2020-05-07T14:40:54.242 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:54.344 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41822)>-('127.0.0.1', 41822) and closed server socket.
+2020-05-07T14:40:54.344 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:54.345 # cSBC Logger # DEBUG # The current uptime is 132.361125 seconds.
+2020-05-07T14:40:54.346 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:57.954 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41824)>-('127.0.0.1', 41824) and closed server socket.
+2020-05-07T14:40:57.954 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:57.957 # cSBC Logger # DEBUG # The current uptime is 135.970338 seconds.
+2020-05-07T14:40:57.957 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:40:58.057 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41826)>-('127.0.0.1', 41826) and closed server socket.
+2020-05-07T14:40:58.058 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:40:58.058 # cSBC Logger # DEBUG # The current uptime is 136.074081 seconds.
+2020-05-07T14:40:58.058 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:41:02.855 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41828)>-('127.0.0.1', 41828) and closed server socket.
+2020-05-07T14:41:02.856 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:41:02.857 # cSBC Logger # DEBUG # The current uptime is 140.872679 seconds.
+2020-05-07T14:41:02.858 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:41:02.962 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41830)>-('127.0.0.1', 41830) and closed server socket.
+2020-05-07T14:41:02.964 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:41:02.966 # cSBC Logger # DEBUG # The current uptime is 140.981043 seconds.
+2020-05-07T14:41:02.967 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:41:03.067 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41832)>-('127.0.0.1', 41832) and closed server socket.
+2020-05-07T14:41:03.068 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:41:03.069 # cSBC Logger # DEBUG # The current uptime is 141.084764 seconds.
+2020-05-07T14:41:03.069 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:41:03.170 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41834)>-('127.0.0.1', 41834) and closed server socket.
+2020-05-07T14:41:03.171 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:41:03.172 # cSBC Logger # DEBUG # The current uptime is 141.18718 seconds.
+2020-05-07T14:41:03.172 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:41:13.373 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41836)>-('127.0.0.1', 41836) and closed server socket.
+2020-05-07T14:41:13.373 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:41:13.374 # cSBC Logger # DEBUG # The current uptime is 151.389873 seconds.
+2020-05-07T14:41:13.374 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:41:13.479 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41838)>-('127.0.0.1', 41838) and closed server socket.
+2020-05-07T14:41:13.479 # cSBC Logger # DEBUG # Recieved EVENT.
+2020-05-07T14:41:18.508 # cSBC Logger # DEBUG # Writing images to disk.
+2020-05-07T14:41:19.697 # cSBC Logger # DEBUG # Wrote 150 images to disk at images/2020-05-07T14:41:18.509435.
+2020-05-07T14:41:19.700 # cSBC Logger # DEBUG # Cleared rolling buffer.
+2020-05-07T14:41:19.701 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:41:58.900 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41846)>-('127.0.0.1', 41846) and closed server socket.
+2020-05-07T14:41:58.900 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:41:58.900 # cSBC Logger # DEBUG # The current uptime is 196.916417 seconds.
+2020-05-07T14:41:58.901 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:42:01.222 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41848)>-('127.0.0.1', 41848) and closed server socket.
+2020-05-07T14:42:01.245 # cSBC Logger # DEBUG # Recieved EVENT.
+2020-05-07T14:42:06.248 # cSBC Logger # DEBUG # Writing images to disk.
+2020-05-07T14:42:07.556 # cSBC Logger # DEBUG # Wrote 150 images to disk at images/2020-05-07T14:42:06.249112.
+2020-05-07T14:42:07.595 # cSBC Logger # DEBUG # Cleared rolling buffer.
+2020-05-07T14:42:07.595 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:42:07.598 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41860)>-('127.0.0.1', 41860) and closed server socket.
+2020-05-07T14:42:07.599 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:42:07.600 # cSBC Logger # DEBUG # The current uptime is 205.615369 seconds.
+2020-05-07T14:42:07.601 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:42:07.701 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41862)>-('127.0.0.1', 41862) and closed server socket.
+2020-05-07T14:42:07.702 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:42:07.703 # cSBC Logger # DEBUG # The current uptime is 205.718354 seconds.
+2020-05-07T14:42:07.704 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
+2020-05-07T14:42:10.291 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65431), raddr=('127.0.0.1', 41864)>-('127.0.0.1', 41864) and closed server socket.
+2020-05-07T14:42:10.293 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-07T14:42:10.293 # cSBC Logger # DEBUG # The current uptime is 208.30955 seconds.
+2020-05-07T14:42:10.294 # cSBC Logger # DEBUG # Bound to 127.0.0.1-65431 and listening.
