@@ -42,16 +42,49 @@ def createLogger():
 
     """
     logging.basicConfig(
-        filename=LOG_FILE, filemode=FILEMODE, format=MESSAGE_FORMAT, level=logging.DEBUG
+        filename=LOG_FILE,
+        filemode=FILEMODE,
+        format=MESSAGE_FORMAT,
+        datefmt=DATE_FORMAT,
+        level=logging.DEBUG,
     )
     return logging.getLogger(LOGGER_NAME)
 
 
 def createDatetimePath():
-    dtime_str = datetime.datetime.now().isoformat().replace(":", "-").replace(".", "-")
+    dtime_str = datetime.datetime.now().isoformat()
     dtime_path = os.path.join(IMG_DIR, dtime_str)
     os.mkdir(dtime_path)
     return dtime_path
+
+
+def logCameraProperties(cap, logger):
+    """Logs the current camera properties."""
+    logger.debug(f"Camera Exposure: {cap.get(cv2.CAP_PROP_EXPOSURE)}")
+    logger.debug(f"Camera Gain: {cap.get(cv2.CAP_PROP_GAIN)}")
+    logger.debug(f"Camera Brightness: {cap.get(cv2.CAP_PROP_BRIGHTNESS)}")
+    logger.debug(f"Camera Gamma: {cap.get(cv2.CAP_PROP_GAMMA)}")
+    logger.debug(f"Camera FPS: {cap.get(cv2.CAP_PROP_FPS)}")
+    logger.debug(f"Camera Backlight: {cap.get(cv2.CAP_PROP_BACKLIGHT)}")
+    logger.debug(f"Camera Frame Width: {cap.get(cv2.CAP_PROP_FRAME_WIDTH)}")
+    logger.debug(f"Camera Frame Height: {cap.get(cv2.CAP_PROP_FRAME_HEIGHT)}")
+    logger.debug(f"Camera Temperature: {cap.get(cv2.CAP_PROP_TEMPERATURE)}")
+
+
+def initalizeCamera(logger):
+    """Initalizes camera object with the correct settings."""
+    cap = EasyPySpin.VideoCapture(0)
+    logger.debug(f"Created {cap}")
+
+    cap.set(cv2.CAP_PROP_EXPOSURE, EXPOSURE)
+    cap.set(cv2.CAP_PROP_GAIN, GAIN)
+    cap.set(cv2.CAP_PROP_BRIGHTNESS, BRIGHTNESS)
+    cap.set(cv2.CAP_PROP_GAMMA, GAMMA)
+    cap.set(cv2.CAP_PROP_FPS, FPS)
+    cap.set(cv2.CAP_PROP_BACKLIGHT, BACKLIGHT)
+
+    logCameraProperties(cap, logger)
+    return cap
 
 
 def writeImages(rollBuf, diskImages, logger):
@@ -65,10 +98,10 @@ def writeImages(rollBuf, diskImages, logger):
         for img in list(reversed(rollBuf)):
             img_str = f"img_{num_captured}" + IMG_TYPE
             img.tofile(os.path.join(dtime_path, img_str))
-            # increment counters and log writ
+            # increment counters and log write
             diskImages.value += 1
             num_captured += 1
-            logger.info("Wrote image {} to disk...".format(diskImages.value))
+        logger.debug(f"Wrote {num_captured} images to disk at {dtime_path}.")
         return num_captured
     except:
         logger.error("Exception occurred", exc_info=True)
@@ -78,10 +111,13 @@ def captureImages(cameraStatus, eventStatus, diskImages, logger):
     """Initialize camera and rolling buffer and recieves messages for commands. Calls function to write images."""
     try:
         # Create object to handle FLIR camera operations
-        cap = EasyPySpin.VideoCapture(0)
+        cap = initalizeCamera(logger)
+
         # Create rolling buffer for images
         rollBuf = deque(maxlen=ROLL_BUF_SIZE)
+        logger.debug(f"Created {rollBuf}")
 
+        logger.debug(f"Capturing images.")
         while True:
             # in standby read frame, encode image, append to rolling buffer
             if cameraStatus.value and not eventStatus.value:
@@ -90,8 +126,10 @@ def captureImages(cameraStatus, eventStatus, diskImages, logger):
                 rollBuf.append(img)
             # write images when event triggered
             elif cameraStatus.value and eventStatus.value:
+                logger.debug(f"Writing images to disk.")
                 num_captured = writeImages(rollBuf, diskImages, logger)
                 rollBuf.clear()
+                logger.debug(f"Cleared rolling buffer.")
                 eventStatus.value = False
             # release the camera and exit
             else:
@@ -101,7 +139,7 @@ def captureImages(cameraStatus, eventStatus, diskImages, logger):
     # release the camera and exit
     finally:
         cap.release()
-        logger.info("Successflly released camera...")
+        logger.info("Successfully released camera.")
 
 
 def connectionHandler(cameraStatus, eventStatus, diskImages, logger):
@@ -113,21 +151,19 @@ def connectionHandler(cameraStatus, eventStatus, diskImages, logger):
                 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
                 s.bind((HOST, PORT))
                 s.listen(NUM_CONN)
-
-                logger.info("Waiting for connection...")
-                logger.info(
-                    f"eventStatus is {eventStatus.value}. cameraStatus is {cameraStatus.value}."
-                )
+                logger.debug(f"Bound to {HOST}-{PORT} and listening.")
 
                 # Establish connection with client. Closes socket to disallow for more connections
                 conn, addr = s.accept()
                 s.close()
+                logger.debug(
+                    f"Acccepted connection from {conn}-{addr} and closed server socket."
+                )
 
                 # open the connection to the client
                 with conn:
-                    logger.info(f"Got connection from {addr}")
                     data = conn.recv(4096).decode("utf-8")
-                    logger.info(f"Command recieved from client: {data}")
+                    logger.debug(f"Recieved {data}.")
 
                     # Sets cSBC to STANDBY mode
                     if data == STANDBY:
@@ -160,11 +196,13 @@ if __name__ == "__main__":
 
         # create logger
         logger = createLogger()
+        logger.debug(f"Logger created for {__file__}.")
 
         # create new images directory each time cSBC starts up
         if os.path.exists(IMG_DIR):
             shutil.rmtree(IMG_DIR)
         os.mkdir(IMG_DIR)
+        logger.debug(f"New image directory created at {IMG_DIR}.")
 
         # create a process with a target function
         p1 = mp.Process(
@@ -177,10 +215,14 @@ if __name__ == "__main__":
 
         # start the process
         p1.start()
+        logger.debug(f"{p1}.")
         p2.start()
+        logger.debug(f"{p2}.")
 
         # Stops execution of current program until this process completes.
         p2.join()
+        logger.debug(f"{p2}.")
         p1.join()
+        logger.debug(f"{p1}.")
     except:
         logger.error("Exception occurred", exc_info=True)
