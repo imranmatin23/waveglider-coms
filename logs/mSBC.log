@@ -1,1 +1,31 @@
-2020-05-07T14:43:22.255 # mSBC Logger # DEBUG # Logger created for /home/imran/Desktop/waveglider-coms/mSBC.py.
+2020-05-07T16:00:34.722 # mSBC Logger # DEBUG # Logger created for mSBC.py.
+2020-05-07T16:00:34.825 # mSBC Logger # INFO # Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
+2020-05-07T16:00:34.826 # mSBC Logger # INFO # Sent b'UPTIME' to cSBC.
+2020-05-07T16:00:34.827 # mSBC Logger # INFO # Recieved: The server's uptime is 25.493288 seconds.
+2020-05-07T16:00:34.928 # mSBC Logger # INFO # Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
+2020-05-07T16:00:34.928 # mSBC Logger # INFO # Sent b'UPTIME' to cSBC.
+2020-05-07T16:00:34.930 # mSBC Logger # INFO # Recieved: The server's uptime is 25.596320 seconds.
+2020-05-07T16:00:35.032 # mSBC Logger # INFO # Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
+2020-05-07T16:00:35.033 # mSBC Logger # INFO # Sent b'UPTIME' to cSBC.
+2020-05-07T16:00:35.034 # mSBC Logger # INFO # Recieved: The server's uptime is 25.700225 seconds.
+2020-05-07T16:00:35.136 # mSBC Logger # INFO # Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
+2020-05-07T16:00:35.136 # mSBC Logger # INFO # Sent b'UPTIME' to cSBC.
+2020-05-07T16:00:35.137 # mSBC Logger # INFO # Recieved: The server's uptime is 25.803449 seconds.
+2020-05-07T16:00:35.238 # mSBC Logger # INFO # Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
+2020-05-07T16:00:35.239 # mSBC Logger # INFO # Sent b'UPTIME' to cSBC.
+2020-05-07T16:00:35.240 # mSBC Logger # INFO # Recieved: The server's uptime is 25.906736 seconds.
+2020-05-07T16:00:35.342 # mSBC Logger # INFO # Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
+2020-05-07T16:00:35.342 # mSBC Logger # INFO # Sent b'UPTIME' to cSBC.
+2020-05-07T16:00:35.344 # mSBC Logger # INFO # Recieved: The server's uptime is 26.010335 seconds.
+2020-05-07T16:00:35.446 # mSBC Logger # INFO # Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
+2020-05-07T16:00:35.446 # mSBC Logger # INFO # Sent b'UPTIME' to cSBC.
+2020-05-07T16:00:35.450 # mSBC Logger # INFO # Recieved: The server's uptime is 26.115353 seconds.
+2020-05-07T16:00:35.551 # mSBC Logger # INFO # Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
+2020-05-07T16:00:35.552 # mSBC Logger # INFO # Sent b'EVENT' to cSBC.
+2020-05-07T16:00:42.373 # mSBC Logger # INFO # Recieved: EVENT captured.
+2020-05-07T16:00:42.474 # mSBC Logger # INFO # Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
+2020-05-07T16:00:42.475 # mSBC Logger # INFO # Sent b'UPTIME' to cSBC.
+2020-05-07T16:00:42.476 # mSBC Logger # INFO # Recieved: The server's uptime is 33.142749 seconds.
+2020-05-07T16:00:42.589 # mSBC Logger # INFO # Connected to cSBC at HOST=127.0.0.1 and PORT=65431.
+2020-05-07T16:00:42.589 # mSBC Logger # INFO # Sent b'SHUTDOWN' to cSBC.
+2020-05-07T16:00:42.591 # mSBC Logger # INFO # Recieved: Server SHUTDOWN. Captured 150 images in total.
