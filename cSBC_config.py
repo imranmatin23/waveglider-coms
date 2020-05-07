@@ -38,14 +38,18 @@ DATE_FORMAT = "%Y-%m-%dT%H:%M:%S"
 MESSAGE_FORMAT = "%(asctime)s.%(msecs)03d # %(name)s # %(levelname)s # %(message)s"
 
 
-########### COMMANDS ###########
-# Responses to client
+########### DATA TRANSFER FORMAT ###########
+## Note: When adding new commands add the command to COMMANDS and a response in RESPONSES.
+## Also add a case for the command in the `performCommands()` function and 
+## any other necessary locations that compute the necessary values.
+
+# RESPONSES Responses to client
 UPTIME_RESP = b"The server's uptime is %0.6f seconds."
 EVENT_RESP = b"EVENT captured."
 SHUTDOWN_RESP = b"Server SHUTDOWN. Captured %d images in total."
 
 
-#### DATA TRANSFER FORMAT DEFINED HERE ####
+# COMMANDS
 UPTIME = "UPTIME"
 EVENT = "EVENT"
 SHUTDOWN = "SHUTDOWN"

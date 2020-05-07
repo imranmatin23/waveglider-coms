@@ -10,8 +10,10 @@ to the cSBCs when it needs to issue a command to turn on (STANDBY), turn off (SH
 capture images (EVENT).
 """
 
+import time
 import socket
 import logging
+import sys
 from mSBC_config import *
 
 
@@ -69,13 +71,15 @@ def readInput(logger):
         logger.error("Exception occurred", exc_info=True)
         valid = False
         command = EXCEPTION
-        print()
 
     return command, valid
 
 
 def sendData(command, logger):
     try:
+        # allow for connection server to begin listening again
+        time.sleep(0.1)
+
         # open a socket for this client
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             # connect to the server
@@ -96,6 +100,7 @@ def sendData(command, logger):
         logger.error(e)
     except:
         logger.error("Fatal Exception occurred", exc_info=True)
+        sys.exit()
 
 
 def clientSend(logger):
@@ -109,7 +114,7 @@ def clientSend(logger):
             # validate input
             if not valid:
                 if command == EXCEPTION:
-                    return
+                    sys.exit()
                 else:
                     continue
 
@@ -127,7 +132,8 @@ def clientSend(logger):
 
 if __name__ == "__main__":
     """Create the logger and send messages to cSBC."""
-    print("\n\n************Starting Interactive mSBC************\n\n")
+
+    print("\n\n************Starting Testbench************\n\n")
     logger = createLogger()
     clientSend(logger)
-    print("\n\n************Completed Interactive mSBC************\n\n")
+    print("\n\n\n************Completed Testbench************\n\n")

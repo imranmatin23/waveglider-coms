@@ -143,7 +143,7 @@ def captureImages(cameraStatus, eventStatus, diskImages, logger):
 
 
 def performCommand(conn, cameraStatus, eventStatus, diskImages, logger):
-    """Handle command."""
+    """Handle data transferred over connection and changes system state appropriately."""
     try:
         # open the connection to the client
         with conn:
