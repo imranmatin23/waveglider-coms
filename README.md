@@ -7,6 +7,9 @@ This [link](https://docs.opencv.org/2.4/modules/highgui/doc/reading_and_writing_
 ## Setting Log Message Format
 This [link](https://docs.python.org/3/library/logging.html#logrecord-attributes) contains all of the attributes that can be logged in one call to log.
 
+## Camera Link
+This is a [link](https://www.flir.com/products/blackfly-usb3?model=BFLY-U3-23S6C-C) the specific camera that I am working with. The camera is the FLIR Blackfly USB3 MODEL: BFLY-U3-23S6C-C: 2.3 MP, 41 FPS, SONY IMX249, COLOR
+
 ## INTRODUCTION
 
 ## TUTORIAL
