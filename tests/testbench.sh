@@ -11,6 +11,11 @@ printf "Time: $(date +"%H:%M:%S")\n" >> ${outfile}
 
 printf "\n" >> ${outfile}
 
+printf "================ Settings: Camera Settings ===============\n" >> ${outfile}
+cat camera_config.py >> ${outfile}
+
+printf "\n" >> ${outfile}
+
 printf "================ Test: test_compression_size.py ===============\n" >> ${outfile}
 python test_compression_size.py >> ${outfile}
 

@@ -5,15 +5,9 @@ import EasyPySpin
 import cv2
 import os
 import shutil
+from camera_config import *
 
 IMG_DIR = "test_compression_size"
-# Camera Settings
-EXPOSURE = 1000
-GAIN = 2
-BRIGHTNESS = 1
-GAMMA = 0.25
-FPS = 8
-BACKLIGHT = 1
 
 
 def initalizeCamera():

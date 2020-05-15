@@ -30,6 +30,10 @@ def run_single_camera(cam):
             nodemap.GetNode("AcquisitionFrameRate")
         )
 
+        current_frame_rate = node_acquisition_framerate.GetValue()
+
+        print("The current frame rate is %f..." % current_frame_rate)
+
         # if not PySpin.IsAvailable(node_acquisition_framerate) and not PySpin.IsReadable(
         #     node_acquisition_framerate
         # ):
@@ -37,11 +41,11 @@ def run_single_camera(cam):
         #     return False
 
         # Range [1.0, 8.576685]
-        node_acquisition_framerate.SetValue(10)
+        node_acquisition_framerate.SetValue(8)
 
         framerate_to_set = node_acquisition_framerate.GetValue()
 
-        print("Frame rate to be set to %d..." % framerate_to_set)
+        print("Frame rate to be set to %f..." % framerate_to_set)
 
         # Deinitialize camera
         cam.DeInit()
@@ -80,7 +84,7 @@ def main():
         system.ReleaseInstance()
 
         print("Not enough cameras!")
-        raw_input("Done! Press Enter to exit...")
+        input("Done! Press Enter to exit...")
         return False
 
     # Run example on each camera

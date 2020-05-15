@@ -6,19 +6,7 @@ import cv2
 import time
 from collections import deque
 import numpy as np
-
-# Camera Settings
-EXPOSURE = 5000
-GAIN = 2
-BRIGHTNESS = 1
-GAMMA = 0.25
-FPS = 8
-BACKLIGHT = 1
-
-# buffer size
-BUF_SIZE = 150
-# image type
-IMG_TYPE = ".png"
+from camera_config import *
 
 
 def initalizeCamera():

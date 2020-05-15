@@ -8,19 +8,8 @@ from collections import deque
 import numpy as np
 import os
 import shutil
+from camera_config import *
 
-# Camera Settings
-EXPOSURE = 5000
-GAIN = 2
-BRIGHTNESS = 1
-GAMMA = 0.25
-FPS = 8
-BACKLIGHT = 1
-
-# buffer size
-BUF_SIZE = 150
-# image type
-IMG_TYPE = ".png"
 # test img dir
 IMG_DIR = "test_write_speed"
 

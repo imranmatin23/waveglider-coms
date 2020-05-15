@@ -1,3 +1,3 @@
 images/
-test_compression_size/
-test_write_speed/
+tests/test_compression_size/
+tests/test_write_speed/

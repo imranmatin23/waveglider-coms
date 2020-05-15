@@ -5,18 +5,7 @@
 import EasyPySpin
 import cv2
 import time
-
-# Range for FPS [1,8.57]
-FPS = 8
-# Number of frames to capture
-NUM_FRAMES = 120
-# Camera Settings
-EXPOSURE = 100
-GAIN = 2
-BRIGHTNESS = 1
-GAMMA = 0.25
-FPS = 8
-BACKLIGHT = 1
+from camera_config import *
 
 
 def initalizeCamera():
@@ -38,9 +27,6 @@ if __name__ == "__main__":
     cap = initalizeCamera()
 
     try:
-        # set FPS
-        cap.set(cv2.CAP_PROP_FPS, FPS)
-
         # Find OpenCV version
         (major_ver, minor_ver, subminor_ver) = (cv2.__version__).split(".")
 
