@@ -10,15 +10,6 @@ import time
 FPS = 8
 # Number of frames to capture
 NUM_FRAMES = 120
-
-# Author: Imran Matin
-# Description: PNG Compression Size Test. Test compression of PNG images at all compression levels.
-
-import EasyPySpin
-import cv2
-import os
-import shutil
-
 # Camera Settings
 EXPOSURE = 100
 GAIN = 2
