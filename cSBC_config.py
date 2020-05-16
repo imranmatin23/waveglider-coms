@@ -22,7 +22,7 @@ BACKLIGHT = 1
 
 ########### Server constants ###########
 # The server's hostname or IP address
-HOST = "127.0.0.1"
+HOST = "0.0.0.0"
 # The port used by the server
 PORT = 65431
 # number of connections that will be allowed to queue for this server

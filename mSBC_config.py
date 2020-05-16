@@ -4,6 +4,7 @@
 ########### Server constants ###########
 # The server's hostname or IP address
 HOST = "127.0.0.1"
+# HOST = "192.168.7.201"
 # The port used by the server
 PORT = 65431
 # Internal error strings
