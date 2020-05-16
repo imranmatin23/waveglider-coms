@@ -1,32 +1,40 @@
-2020-05-15T19:09:10.472 # cSBC Logger # DEBUG # Logger created for cSBC.py.
-2020-05-15T19:09:10.474 # cSBC Logger # DEBUG # New image directory created at images.
-2020-05-15T19:09:10.484 # cSBC Logger # DEBUG # <Process(Process-1, started)>.
-2020-05-15T19:09:10.496 # cSBC Logger # DEBUG # <Process(Process-2, started)>.
-2020-05-15T19:09:10.498 # cSBC Logger # DEBUG # Bound to 0.0.0.0-65431 and listening.
-2020-05-15T19:09:13.052 # cSBC Logger # DEBUG # Created <EasyPySpin.EasyPySpin.VideoCapture object at 0x7ff94c08ce90>
-2020-05-15T19:09:13.103 # cSBC Logger # DEBUG # Camera Exposure: 99998.0
-2020-05-15T19:09:13.104 # cSBC Logger # DEBUG # Camera Gain: 9.998811256880494
-2020-05-15T19:09:13.107 # cSBC Logger # DEBUG # Camera Brightness: 3.0
-2020-05-15T19:09:13.108 # cSBC Logger # DEBUG # Camera Gamma: 0.25
-2020-05-15T19:09:13.109 # cSBC Logger # DEBUG # Camera FPS: 7.9995223325224805
-2020-05-15T19:09:13.111 # cSBC Logger # DEBUG # Camera Backlight: True
-2020-05-15T19:09:13.114 # cSBC Logger # DEBUG # Camera Frame Width: 2448
-2020-05-15T19:09:13.116 # cSBC Logger # DEBUG # Camera Frame Height: 2048
-2020-05-15T19:09:13.118 # cSBC Logger # DEBUG # Camera Temperature: 46.625
-2020-05-15T19:09:13.119 # cSBC Logger # DEBUG # Created deque([], maxlen=150)
-2020-05-15T19:09:13.119 # cSBC Logger # DEBUG # Capturing images.
-2020-05-15T19:09:37.585 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.7.201', 65431), raddr=('192.168.7.24', 55382)>-('192.168.7.24', 55382) and closed server socket.
-2020-05-15T19:09:37.586 # cSBC Logger # DEBUG # Recieved UPTIME.
-2020-05-15T19:09:37.587 # cSBC Logger # DEBUG # The current uptime is 27.241463 seconds.
-2020-05-15T19:09:37.589 # cSBC Logger # DEBUG # Bound to 0.0.0.0-65431 and listening.
-2020-05-15T19:09:41.192 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.7.201', 65431), raddr=('192.168.7.24', 55383)>-('192.168.7.24', 55383) and closed server socket.
-2020-05-15T19:09:41.192 # cSBC Logger # DEBUG # Recieved EVENT.
-2020-05-15T19:09:46.288 # cSBC Logger # DEBUG # Writing images to disk.
-2020-05-15T19:09:47.863 # cSBC Logger # DEBUG # Wrote 150 images to disk at images/2020-05-15T19:09:46.288565.
-2020-05-15T19:09:47.863 # cSBC Logger # DEBUG # Cleared rolling buffer.
-2020-05-15T19:09:47.864 # cSBC Logger # DEBUG # Bound to 0.0.0.0-65431 and listening.
-2020-05-15T19:09:52.810 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.7.201', 65431), raddr=('192.168.7.24', 55389)>-('192.168.7.24', 55389) and closed server socket.
-2020-05-15T19:09:52.811 # cSBC Logger # DEBUG # Recieved SHUTDOWN.
-2020-05-15T19:09:55.635 # cSBC Logger # INFO # Successfully released camera.
-2020-05-15T19:09:55.668 # cSBC Logger # DEBUG # <Process(Process-2, stopped)>.
-2020-05-15T19:09:55.670 # cSBC Logger # DEBUG # <Process(Process-1, stopped)>.
+2020-05-15T19:30:13.019 # cSBC Logger # DEBUG # Logger created for cSBC.py.
+2020-05-15T19:30:13.021 # cSBC Logger # DEBUG # New image directory created at images.
+2020-05-15T19:30:13.031 # cSBC Logger # DEBUG # <Process(Process-1, started)>.
+2020-05-15T19:30:13.039 # cSBC Logger # DEBUG # <Process(Process-2, started)>.
+2020-05-15T19:30:13.048 # cSBC Logger # DEBUG # Bound to 0.0.0.0-65431 and listening.
+2020-05-15T19:30:15.072 # cSBC Logger # DEBUG # Created <EasyPySpin.EasyPySpin.VideoCapture object at 0x7f0056982f50>
+2020-05-15T19:30:15.129 # cSBC Logger # DEBUG # Camera Exposure: 99998.0
+2020-05-15T19:30:15.129 # cSBC Logger # DEBUG # Camera Gain: 9.998811256880494
+2020-05-15T19:30:15.130 # cSBC Logger # DEBUG # Camera Brightness: 3.0
+2020-05-15T19:30:15.132 # cSBC Logger # DEBUG # Camera Gamma: 0.25
+2020-05-15T19:30:15.133 # cSBC Logger # DEBUG # Camera FPS: 7.9995223325224805
+2020-05-15T19:30:15.135 # cSBC Logger # DEBUG # Camera Backlight: True
+2020-05-15T19:30:15.137 # cSBC Logger # DEBUG # Camera Frame Width: 2448
+2020-05-15T19:30:15.138 # cSBC Logger # DEBUG # Camera Frame Height: 2048
+2020-05-15T19:30:15.141 # cSBC Logger # DEBUG # Camera Temperature: 43.375
+2020-05-15T19:30:15.141 # cSBC Logger # DEBUG # Created deque([], maxlen=150)
+2020-05-15T19:30:15.141 # cSBC Logger # DEBUG # Capturing images.
+2020-05-15T19:33:30.318 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.7.201', 65431), raddr=('192.168.7.24', 56286)>-('192.168.7.24', 56286) and closed server socket.
+2020-05-15T19:33:30.333 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-15T19:33:30.336 # cSBC Logger # DEBUG # The current uptime is 197.346389 seconds.
+2020-05-15T19:33:30.337 # cSBC Logger # DEBUG # Bound to 0.0.0.0-65431 and listening.
+2020-05-15T19:33:34.376 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.7.201', 65431), raddr=('192.168.7.24', 56289)>-('192.168.7.24', 56289) and closed server socket.
+2020-05-15T19:33:34.377 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-15T19:33:34.378 # cSBC Logger # DEBUG # The current uptime is 201.390273 seconds.
+2020-05-15T19:33:34.380 # cSBC Logger # DEBUG # Bound to 0.0.0.0-65431 and listening.
+2020-05-15T19:33:35.806 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.7.201', 65431), raddr=('192.168.7.24', 56290)>-('192.168.7.24', 56290) and closed server socket.
+2020-05-15T19:33:35.807 # cSBC Logger # DEBUG # Recieved UPTIME.
+2020-05-15T19:33:35.808 # cSBC Logger # DEBUG # The current uptime is 202.81978 seconds.
+2020-05-15T19:33:35.809 # cSBC Logger # DEBUG # Bound to 0.0.0.0-65431 and listening.
+2020-05-15T19:33:37.648 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.7.201', 65431), raddr=('192.168.7.24', 56291)>-('192.168.7.24', 56291) and closed server socket.
+2020-05-15T19:33:37.649 # cSBC Logger # DEBUG # Recieved EVENT.
+2020-05-15T19:33:42.744 # cSBC Logger # DEBUG # Writing images to disk.
+2020-05-15T19:33:44.161 # cSBC Logger # DEBUG # Wrote 150 images to disk at images/2020-05-15T19:33:42.748755.
+2020-05-15T19:33:44.161 # cSBC Logger # DEBUG # Cleared rolling buffer.
+2020-05-15T19:33:44.162 # cSBC Logger # DEBUG # Bound to 0.0.0.0-65431 and listening.
+2020-05-15T19:33:52.754 # cSBC Logger # DEBUG # Acccepted connection from <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.7.201', 65431), raddr=('192.168.7.24', 56296)>-('192.168.7.24', 56296) and closed server socket.
+2020-05-15T19:33:52.755 # cSBC Logger # DEBUG # Recieved SHUTDOWN.
+2020-05-15T19:33:55.133 # cSBC Logger # INFO # Successfully released camera.
+2020-05-15T19:33:55.186 # cSBC Logger # DEBUG # <Process(Process-2, stopped)>.
+2020-05-15T19:33:55.195 # cSBC Logger # DEBUG # <Process(Process-1, stopped)>.
