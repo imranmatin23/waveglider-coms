@@ -14,7 +14,7 @@ import time
 import socket
 import logging
 import sys
-from mSBC_config import *
+from config.mSBC_config import *
 
 
 def createLogger():

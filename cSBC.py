@@ -17,7 +17,7 @@ import datetime
 import EasyPySpin
 import multiprocessing as mp
 from collections import deque
-from cSBC_config import *
+from config.cSBC_config import *
 
 
 def createLogger():

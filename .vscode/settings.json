@@ -1,5 +1,6 @@
 {
     "python.pythonPath": "/home/imran/anaconda3/bin/python",
-    "python.linting.enabled": false,
-    "restructuredtext.confPath": "${workspaceFolder}/source"
+    "python.linting.enabled": true,
+    "restructuredtext.confPath": "${workspaceFolder}/source",
+    "python.linting.flake8Enabled": true
 }
