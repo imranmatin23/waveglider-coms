@@ -1,31 +1,32 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""One line statement.
+"""Handles the logic and communication for the mSBC in the WaveGlider system.
 
 Author: Imran Matin
+Email: imatin@ucsd.edu
 
 The client on the WaveGlider will be the mSBC. The reason for this is because
-it will inly be run when it needs to issue commands to the cSBCs. As a client it will connect
-to the cSBCs when it needs to issue a command to turn on (STANDBY), turn off (SHUTOFF), or
-capture images (EVENT).
+it will only be run when it needs to issue commands to the cSBCs. As a client 
+it will connect to the cSBCs when it needs to issue a command to turn on 
+(STANDBY), turn off (SHUTOFF), or capture images (EVENT). The log file for this
+system can be found in ./logs/mSBC.log.
 """
 
 import time
 import socket
 import logging
 import sys
+
+# imports constants for this file
 from config.mSBC_config import *
 
 
 def createLogger():
-    """Create logger for this SBC.
-
-    It sets the basic configuration for the logger.
+    """Create and sets the basic configuration for the logger for this SBC.
 
     Parameters
     ----------
-    param1 : int
-        The first parameter.
+    None
 
     Returns
     -------
@@ -34,9 +35,8 @@ def createLogger():
 
     Raises
     ------
-    OSError
-        list of all exceptions that are relevant to the interface.
-
+    None
+    
     """
     logging.basicConfig(
         filename=LOG_FILE,
@@ -51,17 +51,38 @@ def createLogger():
 
 
 def readInput(logger):
-    """Read user input from command line."""
+    """Read user input from the command line and selects the correct command.
+
+    Parameters
+    ----------
+    logger : logging
+        The logger for the mSBC.
+
+    Returns
+    -------
+    command
+        Returns a command that is translated from the user input into a command the cSBC expects.
+    valid
+        Returns a bool that explains if the user inputted a valid command or not.
+        
+    Raises
+    ------
+    None
+    
+    """
     try:
+        # reads user input
         userInput = input(PROMPT)
         valid = True
 
+        # selects correct system command based off of user input
         if userInput == UPTIME:
             command = COMMANDS[UPTIME]
         elif userInput == EVENT:
             command = COMMANDS[EVENT]
         elif userInput == SHUTDOWN:
             command = COMMANDS[SHUTDOWN]
+        # handles invalid input
         else:
             valid = False
             command = userInput
@@ -77,6 +98,25 @@ def readInput(logger):
 
 
 def sendData(command, logger):
+    """Takes in a user command, connects to the cSBC and sends the command.
+
+    Parameters
+    ----------
+    command : str
+        The command to send to the cSBC.
+    logger : logging
+        The logger for the mSBC.
+
+    Returns
+    -------
+    NONE
+        
+    Raises
+    ------
+    ConnectionRefusedError
+        Handles when the cSBC is not accepting new connections.
+        
+    """
     try:
         # allow for connection server to begin listening again
         time.sleep(0.1)
@@ -91,11 +131,11 @@ def sendData(command, logger):
             s.sendall(command)
             logger.info(f"Sent {command} to cSBC.")
 
-            # wait till recieve stats back from server
-            # cannot send another command until recieve response
+            # wait till receive stats back from server
+            # cannot send another command until receive response
             # if this line is commented out, cSBC will still not accept new commands until processed previous command completely
             stats = s.recv(4096).decode("utf-8")
-            logger.info(f"Recieved: {stats}")
+            logger.info(f"Received: {stats}")
 
     except ConnectionRefusedError as e:
         logger.error(e)
@@ -105,8 +145,24 @@ def sendData(command, logger):
 
 
 def clientSend(logger):
-    """Send command to cSBC and recieve return message."""
+    """Send command to cSBC and receive return message.
+    
+    This function will shut down mSBC if it sends the shutdown command.
 
+    Parameters
+    ----------
+    logger : logging
+        The logger for the mSBC.
+
+    Returns
+    -------
+    None
+        
+    Raises
+    ------
+    None
+    
+    """
     while True:
         try:
             # get user input
@@ -132,7 +188,21 @@ def clientSend(logger):
 
 
 if __name__ == "__main__":
-    """Create the logger and send messages to cSBC."""
+    """Create the logger and send messages to cSBC.
+
+    Parameters
+    ----------
+    None
+
+    Returns
+    -------
+    None
+        
+    Raises
+    ------
+    None
+    
+    """
     print("\n\n************Starting Interactive mSBC************\n\n")
     logger = createLogger()
     clientSend(logger)

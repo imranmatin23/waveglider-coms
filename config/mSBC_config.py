@@ -1,10 +1,17 @@
-# Author: Imran Matin
-# Description: This file contains all the necessary configuration aspects for the mSBC module.
+"""Contains all the necessary configuration aspects for the mSBC module.
+
+Author: Imran Matin
+Email: imatin@ucsd.edu
+
+Contains
+- Server Constants
+- Logging Constants
+- Data Transfer Format
+"""
 
 ########### Server constants ###########
 # The server's hostname or IP address
 HOST = "127.0.0.1"
-# HOST = "192.168.7.201"
 # The port used by the server
 PORT = 65431
 # Internal error strings

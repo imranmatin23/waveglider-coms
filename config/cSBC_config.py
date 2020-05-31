@@ -1,6 +1,14 @@
-# Author: Imran Matin
-# Description: This file contains all the necessary configuration aspects for the cSBC module.
+"""Contains all the necessary configuration aspects for the cSBC module.
 
+Author: Imran Matin
+Email: imatin@ucsd.edu
+
+Contains
+- Camera Constants
+- Server Constants
+- Logging Constants
+- Data Transfer Format
+"""
 
 ########### Camera constants ###########
 # Maximum number of images in rolling buffer at once
@@ -40,7 +48,7 @@ MESSAGE_FORMAT = "%(asctime)s.%(msecs)03d # %(name)s # %(levelname)s # %(message
 
 ########### DATA TRANSFER FORMAT ###########
 ## Note: When adding new commands add the command to COMMANDS and a response in RESPONSES.
-## Also add a case for the command in the `performCommands()` function and 
+## Also add a case for the command in the `performCommands()` function and
 ## any other necessary locations that compute the necessary values.
 
 # RESPONSES Responses to client
