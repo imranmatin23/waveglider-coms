@@ -10,21 +10,10 @@ This [link](https://docs.python.org/3/library/logging.html#logrecord-attributes)
 ## Camera Link
 This is a [link](https://www.flir.com/products/blackfly-usb3?model=BFLY-U3-23S6C-C) the specific camera that I am working with. The camera is the FLIR Blackfly USB3 MODEL: BFLY-U3-23S6C-C: 2.3 MP, 41 FPS, SONY IMX249, COLOR
 
-## INTRODUCTION
-
-## TUTORIAL
-
-## API REFERENCE
-
-## DEVELOPER DOCUMENTATION
-
-## INSTALL
-
-## LICENSE
-
-## TODO
-
-## CHANGELOG
-
-## NOTES
-- Sphinx for Documentation
+# Notes
+* Explain how the program works with mSBC and cSBC
+* Explain how and where to run the tests
+* Explain how the logs work
+* Explain how the config files work
+* Define the system architecture
+* Define the system specifications
