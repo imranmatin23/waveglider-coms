@@ -25,6 +25,7 @@ from camera_config import *
 IMG_TYPE = ".png"
 NUM_TRIALS = 10
 MAX_DELAY = 6
+BUF_SIZE = 150
 PROMPT = f"The number of images captured after an event delay is the average number of images captured accross {NUM_TRIALS} trials."
 
 
