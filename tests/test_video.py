@@ -76,6 +76,9 @@ if __name__ == "__main__":
             # break on pressing 'q'
             if key == ord("q"):
                 break
+    except Exception as e:
+        print("Exception occurred...")
+        print(e)
     finally:
         cv2.destroyAllWindows()
         # Release camera
