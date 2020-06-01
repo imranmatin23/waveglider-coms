@@ -49,6 +49,9 @@ if __name__ == "__main__":
             shutil.rmtree(IMG_DIR)
         os.mkdir(IMG_DIR)
 
+        # name of image to save
+        filename = os.path.join(IMG_DIR, f"test1.png")
+
         # capture an image
         ret, frame = cap.read()
         print(PROMPT)
@@ -59,7 +62,6 @@ if __name__ == "__main__":
             # save on pressing 's'
             if key == ord("s"):
                 # write the image to disk
-                filename = os.path.join(IMG_DIR, f"test1.png")
                 cv2.imwrite(filename, frame)
                 break
             # break on pressing 'q'
