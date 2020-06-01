@@ -26,7 +26,7 @@ from camera_config import *
 IMG_TYPE = ".png"
 IMG_DIR = "test_write_speed"
 BUF_SIZE = 150
-NUM_WRITES = 5
+NUM_WRITES = 3
 
 
 def initializeCamera():
@@ -85,6 +85,7 @@ if __name__ == "__main__":
     times = []
 
     try:
+        print("Starting Write Speed Test...")
         # create new images directory each time cSBC starts up
         if os.path.exists(IMG_DIR):
             shutil.rmtree(IMG_DIR)
@@ -102,3 +103,4 @@ if __name__ == "__main__":
     finally:
         # Release camera
         cap.release()
+        print("Completed Write Speed Test...")
