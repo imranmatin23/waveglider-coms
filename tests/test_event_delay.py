@@ -74,7 +74,7 @@ if __name__ == "__main__":
             # execute number of trials for this delay value
             for i in range(0, NUM_TRIALS):
                 # append the number of images captured during delay seconds for this trial
-                num_captured.append(cap, calcNumCaptured(delay))
+                num_captured.append(calcNumCaptured(cap, delay))
 
             # print the average of all trials for this delay value
             print(
