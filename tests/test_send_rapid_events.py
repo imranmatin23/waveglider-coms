@@ -68,11 +68,14 @@ def send_shutdown():
 
 if __name__ == "__main__":
     print("Starting Send Rapid Events Test...")
-    for i in range(0, NUM_TRIALS):
-        # wait period to allow for cSBC to place collect images
-        sleep(5)
-        send_events(NUM_EVENTS)
+    try:
+        for i in range(0, NUM_TRIALS):
+            # wait period to allow for cSBC to place collect images
+            sleep(5)
+            send_events(NUM_EVENTS)
 
-    # Shutdown the cSBC
-    send_shutdown()
-    print("Completed Send Rapid Events Test...")
+        # Shutdown the cSBC
+        send_shutdown()
+    except Exception as e:
+        print(f"Exception Occurred")
+        print("Completed Send Rapid Events Test...")
