@@ -69,7 +69,7 @@ if __name__ == "__main__":
 
             # save on pressing 's'
             if key == ord("s"):
-                time_stamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+                time_stamp = datetime.datetime.now().isoformat()
                 file = time_stamp + ".png"
                 filename = os.path.join(IMG_DIR, file)
                 cv2.imwrite(filename, frame)
