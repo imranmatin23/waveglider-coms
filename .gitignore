@@ -1,8 +1,8 @@
 images/
-tests/test_compression_size/
-tests/test_write_speed/
 tests/test_capture_single_image/
+tests/test_compression_size/
 tests/test_video/
+tests/test_write_speed/
 
 
 
