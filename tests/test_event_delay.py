@@ -26,9 +26,6 @@ IMG_TYPE = ".png"
 NUM_TRIALS = 10
 MAX_DELAY = 6
 PROMPT = f"The number of images captured after an event delay is the average number of images captured accross {NUM_TRIALS} trials."
-RESULT = (
-    f"An event delay of {delay} seconds captures {np.average(num_captured)} images."
-)
 
 
 def initializeCamera():
@@ -80,7 +77,9 @@ if __name__ == "__main__":
                 num_captured.append(cap, calcNumCaptured(delay))
 
             # print the average of all trials for this delay value
-            print(RESULT)
+            print(
+                f"An event delay of {delay} seconds captures {np.average(num_captured)} images."
+            )
     finally:
         # Release camera
         cap.release()

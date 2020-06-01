@@ -27,7 +27,6 @@ IMG_TYPE = ".png"
 IMG_DIR = "test_write_speed"
 BUF_SIZE = 150
 NUM_WRITES = 5
-RESULT = f"For {NUM_WRITES} writes, it took {np.average(times)} seconds to write {BUF_SIZE} images to disk on average."
 
 
 def initializeCamera():
@@ -97,7 +96,9 @@ if __name__ == "__main__":
             rollBuf = collectImages(rollBuf)
             times, rollBuf = timeWrite(times, rollBuf)
 
-        print(RESULT)
+        print(
+            f"For {NUM_WRITES} writes, it took {np.average(times)} seconds to write {BUF_SIZE} images to disk on average."
+        )
     finally:
         # Release camera
         cap.release()
