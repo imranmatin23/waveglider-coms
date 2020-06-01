@@ -43,6 +43,7 @@ if __name__ == "__main__":
     # initialize the camera with specified settings
     cap = initializeCamera()
 
+    print("Starting Test...")
     try:
         # create new images directory each time cSBC starts up
         if os.path.exists(IMG_DIR):
@@ -73,3 +74,4 @@ if __name__ == "__main__":
         cv2.destroyAllWindows()
         # Release camera
         cap.release()
+        print("Completed Test...")

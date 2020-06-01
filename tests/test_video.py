@@ -23,7 +23,7 @@ import datetime
 from camera_config import *
 
 IMG_DIR = "test_video"
-PROMPT = "Press (s) to capture an image, (q) close the video stream."
+PROMPT = "Navigate to the open window. Press (s) to capture an image, (q) close the video stream."
 
 
 def initializeCamera():
@@ -43,9 +43,6 @@ def initializeCamera():
 if __name__ == "__main__":
     # initialize the camera with specified settings
     cap = initializeCamera()
-    # rescale the resolution of the window for display
-    cv2.namedWindow("Image", cv2.WINDOW_NORMAL)
-    cv2.resizeWindow("Image", 1280, 640)
 
     print("Starting Test...")
     try:
@@ -68,16 +65,16 @@ if __name__ == "__main__":
 
             # display the image
             cv2.imshow("capture", frame)
-
+            key = cv2.waitKey(0)
             # save on pressing 's'
-            if cv2.waitKey(1) & 0xFF == ord("s"):
+            if key == ord("s"):
                 time_stamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
                 file = time_stamp + ".png"
                 filename = os.path.join(IMG_DIR, file)
                 cv2.imwrite(filename, frame)
                 print("Saved image to > ", filename)
             # break on pressing 'q'
-            if cv2.waitKey(1) & 0xFF == ord("q"):
+            if key == ord("q"):
                 break
     finally:
         cv2.destroyAllWindows()
