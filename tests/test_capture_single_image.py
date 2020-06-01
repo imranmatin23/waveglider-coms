@@ -42,9 +42,6 @@ def initializeCamera():
 if __name__ == "__main__":
     # initialize the camera with specified settings
     cap = initializeCamera()
-    # rescale the resolution of the window for display
-    cv2.namedWindow("Image", cv2.WINDOW_NORMAL)
-    cv2.resizeWindow("Image", 1280, 640)
 
     try:
         # create new images directory each time cSBC starts up
@@ -58,14 +55,15 @@ if __name__ == "__main__":
         while True:
             # display the captured image
             cv2.imshow(filename, frame)
+            key = cv2.waitKey(0)
             # save on pressing 's'
-            if cv2.waitKey(1) & 0xFF == ord("s"):
+            if key == ord("s"):
                 # write the image to disk
                 filename = os.path.join(IMG_DIR, f"test1.png")
                 cv2.imwrite(filename, frame)
                 break
             # break on pressing 'q'
-            if cv2.waitKey(1) & 0xFF == ord("q"):
+            if key == ord("q"):
                 break
     finally:
         cv2.destroyAllWindows()
