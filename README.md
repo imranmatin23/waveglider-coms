@@ -205,3 +205,5 @@ etc.)
 * Handle this error
     * `Spinnaker: Error writing to device at register address: 000C0004. Please try
     reconnecting the device. [-1008]`
+* Sometimes camera gets deinitialized during multiple tests.
+    * No solution as of right now.
