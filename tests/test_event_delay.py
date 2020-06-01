@@ -1,5 +1,19 @@
-# Author: Imran Matin
-# Description: PNG Compression Size Test. Test compression of PNG images at all compression levels.
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Event Delay Test.
+
+Author: Imran Matin
+Email: imatin@ucsd.edu
+
+Usage:
+# in a new terminal
+python test_event_delay.py
+
+Tests the average number of images captured for each delay value [0,MAX_DELAY].
+Inherits camera settings form the camera_config file in the directory. Captures
+images for NUM_TRIALS for each delay value between [0, MAX_DELAY]. Takes the 
+average of all NUM_TRIALS for each delay value and prints it out.
+"""
 
 import EasyPySpin
 import cv2
@@ -8,9 +22,17 @@ from collections import deque
 import numpy as np
 from camera_config import *
 
+IMG_TYPE = ".png"
+NUM_TRIALS = 10
+MAX_DELAY = 6
+PROMPT = f"The number of images captured after an event delay is the average number of images captured accross {NUM_TRIALS} trials."
+RESULT = (
+    f"An event delay of {delay} seconds captures {np.average(num_captured)} images."
+)
 
-def initalizeCamera():
-    """Initalizes camera object with the correct settings."""
+
+def initializeCamera():
+    """Initializes camera object with the correct settings."""
     cap = EasyPySpin.VideoCapture(0)
 
     cap.set(cv2.CAP_PROP_EXPOSURE, EXPOSURE)
@@ -23,39 +45,43 @@ def initalizeCamera():
     return cap
 
 
+def calcNumCaptured(cap, delay):
+    """Captures as many images into rollBuf for delay number of seconds."""
+    # Create rolling buffer for images
+    rollBuf = deque(maxlen=BUF_SIZE)
+
+    # start time
+    startTime = time.time()
+
+    # capture an image for delay seconds
+    while time.time() - startTime < delay:
+        ret, frame = cap.read()
+        result, img = cv2.imencode(IMG_TYPE, frame)
+        rollBuf.append(img)
+
+    # return the number of images captured in this delay
+    return len(rollBuf)
+
+
 if __name__ == "__main__":
-    # initalize the camera with specified settings
-    cap = initalizeCamera()
+    # initialize the camera with specified settings
+    cap = initializeCamera()
 
     try:
-
-        print(
-            f"The number of images captured after an event delay is the average number of images captured accross {10} trials."
-        )
-
+        print("Starting Event Delay Test...")
+        print(PROMPT)
         # Test possible delay values
-        for delay in range(0, 6):
-            # list to store number of images captured
+        for delay in range(0, MAX_DELAY):
+            # list to store number of images captured for this delay
             num_captured = []
+            # execute number of trials for this delay value
+            for i in range(0, NUM_TRIALS):
+                # append the number of images captured during delay seconds for this trial
+                num_captured.append(cap, calcNumCaptured(delay))
 
-            for i in range(0, 10):
-                # Create rolling buffer for images
-                rollBuf = deque(maxlen=BUF_SIZE)
-
-                # start time
-                startTime = time.time()
-
-                # capture an image for each compression value
-                while time.time() - startTime < delay:
-                    ret, frame = cap.read()
-                    result, img = cv2.imencode(IMG_TYPE, frame)
-                    rollBuf.append(img)
-
-                num_captured.append(len(rollBuf))
-
-            print(
-                f"An event delay of {delay} seconds captures {np.average(num_captured)} images."
-            )
+            # print the average of all trials for this delay value
+            print(RESULT)
     finally:
         # Release camera
         cap.release()
+        print("Completed Event Delay Test...")

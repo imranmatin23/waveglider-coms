@@ -1,5 +1,18 @@
 #!/bin/bash
+#
+# Testbench to execute all tests.
+#
+# Author: Imran Matin
+# Email: imatin@ucsd.edu
+#
+# Usage:
+# in a new terminal
+# sh testbench.sh
+# 
+# Executes all tests in the test directory, and saves the results into a
+# timestamped file in the ./results directory.
 
+# create the outfile to store the results using the current time
 now=$(date +"%Y-%m-%dT%H:%M:%S")
 outfile="results/${now}_test_results.txt"
 

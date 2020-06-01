@@ -1,8 +1,11 @@
-# Test Settings
-BUF_SIZE = 150
-IMG_TYPE = ".png"
-NUM_FRAMES = 120
+"""Contains all the necessary configuration aspects for the testbench.
 
+Author: Imran Matin
+Email: imatin@ucsd.edu
+
+Contains
+- Camera Constants
+"""
 # Camera Settings
 FPS = 8  # Range for FPS [1,8.57] on USB2.0
 EXPOSURE = 100000

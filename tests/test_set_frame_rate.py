@@ -1,4 +1,21 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Set Frame Rate Test.
+
+Author: Imran Matin
+Email: imatin@ucsd.edu
+
+Usage:
+# in a new terminal
+python test_set_frame_rate.py
+
+Sets the frame rate to FPS using Spinnaker's provided file.
+"""
+
 import PySpin
+
+# The frame rate to set the camera to
+FPS = 8
 
 
 def run_single_camera(cam):
@@ -41,11 +58,11 @@ def run_single_camera(cam):
         #     return False
 
         # Range [1.0, 8.576685]
-        node_acquisition_framerate.SetValue(8)
+        node_acquisition_framerate.SetValue(FPS)
 
         framerate_to_set = node_acquisition_framerate.GetValue()
 
-        print("Frame rate to be set to %f..." % framerate_to_set)
+        print("Frame rate was set to %f..." % framerate_to_set)
 
         # Deinitialize camera
         cam.DeInit()

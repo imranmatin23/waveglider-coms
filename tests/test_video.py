@@ -1,15 +1,33 @@
-# Author: Imran Matin
-# Description: Provides realtime video output for the camera.
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Video Test.
+
+Author: Imran Matin
+Email: imatin@ucsd.edu
+
+Usage:
+# in a new terminal
+python test_video.py
+
+Opens a new video stream for the camera.
+Inherits camera settings form the camera_config file in the directory. Press 's'
+to capture a frame and 'q' to break the video stream.
+not.
+"""
 
 import EasyPySpin
 import cv2
 import os
 import shutil
+import datetime
 from camera_config import *
 
+IMG_DIR = "test_video"
+PROMPT = "Press (s) to capture an image, (q) close the video stream."
 
-def initalizeCamera():
-    """Initalizes camera object with the correct settings."""
+
+def initializeCamera():
+    """Initializes camera object with the correct settings."""
     cap = EasyPySpin.VideoCapture(0)
 
     cap.set(cv2.CAP_PROP_EXPOSURE, EXPOSURE)
@@ -23,10 +41,20 @@ def initalizeCamera():
 
 
 if __name__ == "__main__":
-    # initalize the camera with specified settings
-    cap = initalizeCamera()
+    # initialize the camera with specified settings
+    cap = initializeCamera()
+    # rescale the resolution of the window for display
+    cv2.namedWindow("Image", cv2.WINDOW_NORMAL)
+    cv2.resizeWindow("Image", 1280, 640)
 
+    print("Starting Test...")
     try:
+        # create new images directory each time cSBC starts up
+        if os.path.exists(IMG_DIR):
+            shutil.rmtree(IMG_DIR)
+        os.mkdir(IMG_DIR)
+        print(PROMPT)
+
         while True:
             # get an image
             ret, frame = cap.read()
@@ -38,23 +66,21 @@ if __name__ == "__main__":
             print("gain        :", gain)
             print("\033[2A", end="")
 
-            # resize the image
-            # img_show = cv2.resize(frame, None, fx=args.scale, fy=args.scale)
-
             # display the image
             cv2.imshow("capture", frame)
 
-            # check if q key pressed to quit
-            key = cv2.waitKey(30)
-            if key == ord("q"):
+            # save on pressing 's'
+            if cv2.waitKey(1) & 0xFF == ord("s"):
+                time_stamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+                file = time_stamp + ".png"
+                filename = os.path.join(IMG_DIR, file)
+                cv2.imwrite(filename, frame)
+                print("Saved image to > ", filename)
+            # break on pressing 'q'
+            if cv2.waitKey(1) & 0xFF == ord("q"):
                 break
-            # elif key==ord("c"):
-            #     import datetime
-            #     time_stamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-            #     filepath = time_stamp + ".png"
-            #     cv2.imwrite(filepath, frame)
-            #     print("Export > ", filepath)
     finally:
         cv2.destroyAllWindows()
         # Release camera
         cap.release()
+        print("Completed Test...")
