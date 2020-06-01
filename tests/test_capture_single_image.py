@@ -22,7 +22,7 @@ import shutil
 from camera_config import *
 
 IMG_DIR = "test_capture_single_image"
-PROMPT = "Press (s) to save the image and close the window, (q) to not save the image and close the window."
+PROMPT = "Navigate to the open window. Press (s) to save the image and close the window, (q) to not save the image and close the window."
 
 
 def initializeCamera():
