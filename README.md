@@ -46,6 +46,9 @@ send commands, are configured, exceptions, etc.
 
 
 ## Testing
+All tests are contained within the `tests` directory. Please navigate into the
+`tests` directory first before running any tests.
+- To capture a single image run `test
 Explain what the different tests are. How to run the test bench.
 
 

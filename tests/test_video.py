@@ -66,6 +66,7 @@ if __name__ == "__main__":
             # display the image
             cv2.imshow("capture", frame)
             key = cv2.waitKey(0)
+
             # save on pressing 's'
             if key == ord("s"):
                 time_stamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")

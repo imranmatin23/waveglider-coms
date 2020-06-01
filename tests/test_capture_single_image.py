@@ -60,6 +60,7 @@ if __name__ == "__main__":
             # display the captured image
             cv2.imshow(filename, frame)
             key = cv2.waitKey(0)
+
             # save on pressing 's'
             if key == ord("s"):
                 # write the image to disk
