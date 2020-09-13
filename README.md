@@ -5,7 +5,7 @@ WaveGlider system to acquire images. Currently the cSBC file is configured for
 BubbleCam, but can be easily modified for other cameras.
 
 <p align="center">
-    <img  width="500" height="300" src="(MPL WaveGilder Diagram.png">
+    <img  width="500" height="300" src="waveglider.png">
 </p>
 
 ## Deployment
